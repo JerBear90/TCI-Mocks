@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lease & Rent Commercial Trucks | TCI Transportation</title>
+  <meta name="description" content="Lease or rent commercial box trucks, tractors, and trailers. Full service maintenance and nationwide support from TCI Transportation.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .tab-content { display: none !important; }
+    .tab-content.active { display: grid !important; animation: fadeIn 0.4s ease-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .active-tab-btn {
+      background-color: #E11D48 !important;
+      color: white !important;
+      border-color: #E11D48 !important;
+      box-shadow: 0 10px 15px -3px rgba(225, 29, 72, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+  <!-- Navbar -->
+  <nav class="bg-white sticky top-0 z-50 border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <div class="bg-[#E11D48] text-white px-3 py-1 rounded font-black text-2xl italic leading-none">TCI</div>
+        <span class="font-extrabold text-xl tracking-tight hidden sm:block uppercase">Transportation</span>
+      </div>
+      <a href="#quote-form" class="bg-[#E11D48] text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-all">Get a Quote</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-slate-900 py-24 px-4 overflow-hidden text-white">
+    <div class="absolute inset-0 opacity-40">
+      <img src="https://tcitransportation.com/wp-content/uploads/TCI-Trucks-Dry-Van-1024x683.jpg" class="w-full h-full object-cover" alt="TCI Fleet Management" fetchpriority="high">
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto text-center md:text-left">
+      <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight italic uppercase">
+        From a Single Truck <br><span class="text-[#E11D48]">To an Entire Fleet.</span>
+      </h1>
+      <p class="text-slate-300 text-lg max-w-2xl mb-10 italic">Providing the hardware and support to keep your business moving, whether it's local delivery or long-haul logistics.</p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#inventory" class="bg-white text-slate-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-100 transition shadow-lg">View Full Inventory</a>
+        <a href="tel:1800000000" class="border border-white/30 px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">Contact Specialist</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet Inventory Tabs -->
+  <section id="inventory" class="max-w-7xl mx-auto py-24 px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-5xl font-black mb-4 uppercase italic">Primary Fleet Categories</h2>
+      <div class="w-20 h-1 bg-[#E11D48] mx-auto mb-6"></div>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3 mb-16">
+      <button onclick="switchTab('box')" id="btn-box" class="tab-btn active-tab-btn border-2 border-slate-200 px-8 py-3 rounded-full font-bold transition-all">Box Trucks</button>
+      <button onclick="switchTab('daycab')" id="btn-daycab" class="tab-btn border-2 border-slate-200 px-8 py-3 rounded-full font-bold transition-all">Day Cabs</button>
+      <button onclick="switchTab('sleeper')" id="btn-sleeper" class="tab-btn border-2 border-slate-200 px-8 py-3 rounded-full font-bold transition-all">Sleepers</button>
+      <button onclick="switchTab('yard')" id="btn-yard" class="tab-btn border-2 border-slate-200 px-8 py-3 rounded-full font-bold transition-all">Yard/Specialty</button>
+      <button onclick="switchTab('trailers')" id="btn-trailers" class="tab-btn border-2 border-slate-200 px-8 py-3 rounded-full font-bold transition-all">Trailers</button>
+    </div>
+
+    <!-- Box Trucks Tab -->
+    <div id="box" class="tab-content active grid md:grid-cols-2 gap-12 items-start">
+      <div class="space-y-4">
+        <img src="https://tcitransportation.com/wp-content/uploads/TCI-Trucks-Dry-Van-1024x683.jpg" class="rounded-3xl shadow-xl h-[400px] w-full object-cover" alt="TCI Dry Van Box Trucks">
+        <div class="grid grid-cols-2 gap-4">
+          <img src="https://tcitransportation.com/wp-content/uploads/TCI-Trucks-Light-Duty-Dry-Box-1024x683.jpg" class="rounded-xl h-24 w-full object-cover" alt="TCI Light Duty Dry Box">
+          <img src="https://tcitransportation.com/wp-content/uploads/TCI-Trucks-Light-Duty-Reefer-1024x683.jpg" class="rounded-xl h-24 w-full object-cover" alt="TCI Light Duty Reefer">
+        </div>
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold mb-4 italic uppercase">Dry Van & Refrigerated Box Trucks</h3>
+        <p class="text-slate-600 mb-6 font-medium">From light-duty local delivery to heavy-duty 26' refrigerated units. All units are late-model and maintain-ready.</p>
+        <div class="space-y-4 mb-10">
+          <div class="bg-white p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
+            <p class="font-bold">Dry Van Trucks (16' - 26')</p>
+            <p class="text-xs text-slate-500 uppercase">Non-CDL Options | Auto Trans | Lift-Gate</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
+            <p class="font-bold">Refrigerated Trucks</p>
+            <p class="text-xs text-slate-500 uppercase">Thermo King & Carrier Units | Multi-Temp</p>
+          </div>
+        </div>
+        <a href="#quote-form" class="inline-block bg-slate-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-slate-800 transition">Get Monthly Payments</a>
+      </div>
+    </div>
+
+    <!-- Day Cabs Tab -->
+    <div id="daycab" class="tab-content grid md:grid-cols-2 gap-12 items-start">
+      <div class="space-y-4">
+        <img src="https://tcitransportation.com/wp-content/uploads/TCI-Trucks-Single-Axle-Tractor-1024x683.jpg" class="rounded-3xl shadow-xl h-[400px] w-full object-cover" alt="TCI Single Axle Day Cab Tractors">
+        <img src="https://tcitransportation.com/wp-content/uploads/TCI-Trucks-2-and-3-Axle-1024x683.jpg" class="rounded-xl h-32 w-full object-cover" alt="TCI Tandem Axle Day Cab Tractors">
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold mb-6 italic uppercase">Single & Tandem Axle Day Cabs</h3>
+        <p class="text-slate-600 mb-8 leading-relaxed">Heavy-duty power for regional haul and shuttle operations. Late-model Freightliner and Kenworth units maintained to strict DOT standards.</p>
+        <ul class="space-y-4 mb-10">
+          <li class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm">
+            <span class="font-bold">Single Axle Day Cabs</span>
+            <span class="text-slate-400 text-sm ml-auto italic">Optimized for City Shuttle</span>
+          </li>
+          <li class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm">
+            <span class="font-bold">Tandem Axle Day Cabs</span>
+            <span class="text-slate-400 text-sm ml-auto italic">Regional Distribution Power</span>
+          </li>
+        </ul>
+        <a href="#quote-form" class="bg-[#E11D48] text-white px-10 py-4 rounded-xl font-bold hover:bg-red-700 transition">View Monthly Payments</a>
+      </div>
+    </div>
+
+    <!-- Sleepers Tab -->
+    <div id="sleeper" class="tab-content grid md:grid-cols-2 gap-12 items-start">
+      <img src="https://tcitransportation.com/wp-content/uploads/Sleeper-cab-in-lot-1024x683.jpg" class="rounded-3xl shadow-xl h-[400px] w-full object-cover" alt="TCI Tandem Axle Sleeper Tractors">
+      <div>
+        <h3 class="text-3xl font-bold mb-6 italic uppercase">Tandem Axle Sleeper Trucks</h3>
+        <p class="text-slate-600 mb-8 leading-relaxed">Built for the long haul. Our sleeper fleet features premium comfort cabs, advanced telematics, and high-efficiency engines.</p>
+        <div class="grid grid-cols-2 gap-4 mb-10 font-bold text-slate-700">
+          <div class="p-4 bg-white border rounded-xl text-center">Fuel Efficient</div>
+          <div class="p-4 bg-white border rounded-xl text-center">Comfort Cabs</div>
+          <div class="p-4 bg-white border rounded-xl text-center">Air-Ride Susp.</div>
+          <div class="p-4 bg-white border rounded-xl text-center">Double Bunks</div>
+        </div>
+        <a href="#quote-form" class="bg-slate-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-slate-800 transition">Inquire for Monthly Payments</a>
+      </div>
+    </div>
+
+    <!-- Yard/Specialty Tab -->
+    <div id="yard" class="tab-content grid md:grid-cols-2 gap-12 items-start">
+      <img src="https://tcitransportation.com/wp-content/uploads/TCI-Trucks-Yard-Tractors-1024x683.jpg" class="rounded-3xl shadow-xl h-[400px] w-full object-cover" alt="TCI Yard Tractors">
+      <div>
+        <h3 class="text-3xl font-bold mb-6 italic uppercase">Yard Tractors & Spotters</h3>
+        <p class="text-slate-600 mb-8 leading-relaxed">Maximize warehouse and distribution center efficiency with our dedicated spotting tractors. High visibility and quick-connect features as standard.</p>
+        <ul class="space-y-3 mb-10 text-slate-700 font-bold italic">
+          <li class="flex items-center gap-3"><span class="text-red-500">✓</span> Off-Road Yard Tractors</li>
+          <li class="flex items-center gap-3"><span class="text-red-500">✓</span> DOT Certified On-Road Spotters</li>
+        </ul>
+        <a href="#quote-form" class="bg-slate-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-slate-800 transition">Rental Monthly Payments</a>
+      </div>
+    </div>
+
+    <!-- Trailers Tab -->
+    <div id="trailers" class="tab-content grid md:grid-cols-2 gap-12 items-start">
+      <div class="space-y-4">
+        <img src="https://tcitransportation.com/wp-content/uploads/TCI-Trucks-Reefer-Trailers-1024x683.jpg" class="rounded-3xl shadow-xl h-[400px] w-full object-cover" alt="TCI Reefer Trailers">
+        <img src="https://tcitransportation.com/wp-content/uploads/TCI-Trucks-Dry-Trailers-1024x683.jpg" class="rounded-xl h-32 w-full object-cover" alt="TCI Dry Trailers">
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold mb-6 italic uppercase">Dry Van & Reefer Trailers</h3>
+        <p class="text-slate-600 mb-8 leading-relaxed">Versatile trailer options for daily, weekly, or seasonal demand. 53' high-cube and specialized door configurations available.</p>
+        <ul class="space-y-4 mb-10">
+          <li class="flex items-center gap-3 font-bold text-slate-700">
+            <span class="w-3 h-3 bg-[#E11D48] rounded-full"></span> 53' Dry Van (Swing/Roll Door)
+          </li>
+          <li class="flex items-center gap-3 font-bold text-slate-700">
+            <span class="w-3 h-3 bg-[#E11D48] rounded-full"></span> 53' Refrigerated Trailers
+          </li>
+        </ul>
+        <a href="#quote-form" class="bg-slate-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-slate-800 transition">Trailer Availability</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Equipment -->
+  <section class="bg-white py-24 px-4 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-black mb-12 uppercase italic text-center">Additional Equipment Available</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl transition group">
+          <img src="https://tcitransportation.com/wp-content/uploads/TCI-Trucks-Water-Tanker-Truck-1024x683.jpg" class="rounded-xl mb-4 h-40 w-full object-cover transition" alt="TCI Tanker Trucks">
+          <h4 class="font-black text-lg mb-2 italic">Tanker Trucks</h4>
+          <p class="text-xs text-slate-500 font-bold uppercase tracking-widest">Food Grade & Industrial</p>
+        </div>
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl transition group">
+          <img src="https://tcitransportation.com/wp-content/uploads/TCI-Trucks-Production-1024x683.jpg" class="rounded-xl mb-4 h-40 w-full object-cover transition" alt="TCI Studio and Production Trucks">
+          <h4 class="font-black text-lg mb-2 italic">Studio & Production</h4>
+          <p class="text-xs text-slate-500 font-bold uppercase tracking-widest">Film & Entertainment</p>
+        </div>
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl transition group">
+          <img src="https://tcitransportation.com/wp-content/uploads/CNG-truck-1024x683.jpg" class="rounded-xl mb-4 h-40 w-full object-cover transition" alt="TCI CNG Trucks">
+          <h4 class="font-black text-lg mb-2 italic">CNG Trucks</h4>
+          <p class="text-xs text-slate-500 font-bold uppercase tracking-widest">Compressed Natural Gas</p>
+        </div>
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl transition group">
+          <img src="https://tcitransportation.com/wp-content/uploads/TCI-Trucks-Green-Power-1024x683.jpg" class="rounded-xl mb-4 h-40 w-full object-cover transition" alt="TCI Green Power EV Trucks">
+          <h4 class="font-black text-lg mb-2 italic">EV Trucks</h4>
+          <p class="text-xs text-slate-500 font-bold uppercase tracking-widest">Green Power Zero-Emission</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section id="quote-form" class="bg-slate-100 py-24 px-4">
+    <div class="max-w-5xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+      <div class="bg-slate-900 text-white p-12 md:w-2/5">
+        <h3 class="text-3xl font-bold mb-6 italic uppercase">Build Your Fleet.</h3>
+        <p class="text-slate-400 mb-8 leading-relaxed italic">Our consultants will help you find the right equipment and maintenance package for your routes.</p>
+        <div class="space-y-6">
+          <div class="flex gap-3 items-start">
+            <span class="bg-[#E11D48] text-white px-2 py-1 rounded font-black text-xs">1</span>
+            <div>
+              <p class="font-bold">24/7 Roadside Support</p>
+              <p class="text-xs text-slate-500 uppercase font-black tracking-tighter">National Recovery Network</p>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <span class="bg-[#E11D48] text-white px-2 py-1 rounded font-black text-xs">2</span>
+            <div>
+              <p class="font-bold">Full Service Maintenance</p>
+              <p class="text-xs text-slate-500 uppercase font-black tracking-tighter">Zero Downtime Goal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-12 md:w-3/5">
+        <form class="grid gap-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <input type="text" placeholder="First Name" class="bg-slate-50 border p-4 rounded-lg focus:ring-2 focus:ring-red-500 outline-none transition">
+            <input type="text" placeholder="Last Name" class="bg-slate-50 border p-4 rounded-lg focus:ring-2 focus:ring-red-500 outline-none transition">
+          </div>
+          <input type="email" placeholder="Business Email" class="bg-slate-50 border p-4 rounded-lg focus:ring-2 focus:ring-red-500 outline-none transition">
+          <select class="bg-slate-50 border p-4 rounded-lg focus:ring-2 focus:ring-red-500 outline-none transition font-bold">
+            <option>Full Service Lease</option>
+            <option>Truck Rental</option>
+            <option>Contract Maintenance</option>
+          </select>
+          <button type="submit" class="bg-[#E11D48] text-white py-5 rounded-xl font-black text-xl hover:bg-red-700 transition shadow-lg italic tracking-tighter uppercase">Request Monthly Payments</button>
+          <p class="text-[10px] text-slate-400 uppercase text-center font-bold tracking-widest mt-2">Specialists respond within 2 business hours</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white py-12 px-4 text-center border-t border-slate-800">
+    <div class="bg-[#E11D48] text-white px-3 py-1 rounded inline-block font-black italic text-xl mb-6">TCI</div>
+    <p class="text-slate-500 text-sm uppercase font-bold tracking-widest">&copy; 2026 TCI Transportation. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active-tab-btn'));
+      document.getElementById(tabId).classList.add('active');
+      document.getElementById('btn-' + tabId).classList.add('active-tab-btn');
+    }
+  </script>
+</body>
+</html>

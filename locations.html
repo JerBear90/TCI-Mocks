@@ -1,0 +1,874 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<link rel="stylesheet" href="tci-locations.css" />
+
+<div class="tci29-wrap">
+
+  <section class="tci29-hero">
+    <div class="tci29-container">
+      <div class="tci29-hero-grid">
+        <div>
+          <div class="tci29-eyebrow">Over 45 Years of Excellence</div>
+          <h1>Nationwide commercial trucking &amp; fleet leasing locations.</h1>
+          <p>
+            TCI Transportation operates full-service facilities across the United States,
+            providing dedicated logistics, full-service truck leasing, contract maintenance,
+            commercial rentals, brokerage, and intermodal shipping. With a fleet of more than
+            2,500 trucks, tractors, and trailers supported by over 1,000 trained professionals,
+            we help businesses optimize their transportation operations from coast to coast.
+          </p>
+
+          <div class="tci29-hero-actions">
+            <a class="tci29-btn tci29-btn-primary" href="#tci29-locations">Explore Locations</a>
+          </div>
+        </div>
+
+        <div class="tci29-hero-image">
+          <img src="https://tcitransportation.com/wp-content/uploads/2021/10/TCI-Services-Maintenance.jpg" alt="TCI Transportation fleet and logistics operations" />
+          <div class="tci29-hero-badge">
+            <strong>29 Locations Nationwide</strong>
+            <span>Full-service trucking terminals, drop yards, and Success NationalLease facilities positioned in key freight markets across the country.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tci29-section tci29-section-light">
+    <div class="tci29-container">
+      <div class="tci29-head">
+        <h2>Services you need, backed by experience you can trust.</h2>
+        <p>
+          From dedicated transport services to truckload transportation logistics, TCI is
+          the most adaptable and agile partner your business can have. We provide consistently
+          reliable customer service across every location in our nationwide network.
+        </p>
+      </div>
+
+      <div class="tci29-stats">
+        <div class="tci29-stat">
+          <strong>45+ Years</strong>
+          <span>Decades of commercial trucking industry experience and counting.</span>
+        </div>
+        <div class="tci29-stat">
+          <strong>2,500+</strong>
+          <span>Trucks, tractors, and trailers in our nationwide fleet.</span>
+        </div>
+        <div class="tci29-stat">
+          <strong>1,000+</strong>
+          <span>Trained transportation professionals we proudly call family.</span>
+        </div>
+        <div class="tci29-stat">
+          <strong>29 Locations</strong>
+          <span>Full-service terminals, drop yards, and leasing facilities coast to coast.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tci29-section tci29-section-white" id="tci29-locations">
+    <div class="tci29-container">
+      <div class="tci29-head">
+        <h2>Find a TCI trucking &amp; logistics location near you</h2>
+        <p>
+          TCI Transportation operates service locations throughout key freight markets in
+          California, Texas, Nevada, Arizona, Illinois, Georgia, Florida, Kansas, Louisiana,
+          and Washington. Search by city or state to find the facility closest to your operation.
+        </p>
+      </div>
+
+      <div class="tci29-toolbar">
+        <input id="tci29-search" class="tci29-input" type="text" placeholder="Search by location, city, state, or address" />
+        <select id="tci29-state-filter" class="tci29-select">
+          <option value="all">All states</option>
+        </select>
+        <div id="tci29-count" class="tci29-count">29 Locations</div>
+      </div>
+
+      <div class="tci29-map-grid" id="tci29-map-section">
+        <div class="tci29-list-wrap">
+          <div id="tci29-location-list" class="tci29-list"></div>
+        </div>
+
+        <div class="tci29-map-wrap">
+          <div id="tci29-map"></div>
+          <div class="tci29-legend">
+            <span class="tci29-legend-item"><span class="tci29-dot tci29-dot--terminal"></span> TCI Terminal</span>
+            <span class="tci29-legend-item"><span class="tci29-dot tci29-dot--dropyard"></span> Drop Yard</span>
+            <span class="tci29-legend-item"><span class="tci29-dot tci29-dot--success"></span> Success NationalLease</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tci29-section tci29-section-light">
+    <div class="tci29-container">
+      <div class="tci29-head">
+        <h2>Major transportation service markets</h2>
+        <p>
+          TCI's strategically positioned hubs in Los Angeles, Phoenix, and Florida support
+          commercial trucking, fleet leasing, dedicated logistics, and equipment services
+          for businesses operating in the nation's busiest freight corridors.
+        </p>
+      </div>
+
+      <div class="tci29-markets">
+        <article class="tci29-market">
+          <a href="https://tcitransportation.com/commerce/">
+            <img src="https://tcitransportation.com/wp-content/uploads/Untitled-design-11.png" alt="TCI Commerce trucking and logistics facility" />
+            <div class="tci29-market-body">
+              <h3>Commerce, CA &mdash; Trucking &amp; Fleet Leasing</h3>
+              <p>Southern California hub providing dedicated logistics, full-service truck leasing, commercial rentals, and fleet maintenance for one of the nation’s largest freight markets.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="tci29-market">
+          <a href="https://tcitransportation.com/phoenix/">
+            <img src="https://tcitransportation.com/wp-content/uploads/Yardgoat.png" alt="TCI Phoenix trucking and logistics operations" />
+            <div class="tci29-market-body">
+              <h3>Phoenix, AZ &mdash; Dedicated Transport &amp; Logistics</h3>
+              <p>Southwest freight corridor coverage with fully customizable dedicated logistics, scalable fleet support, and 24/7 roadside assistance for your drivers.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="tci29-market">
+          <a href="https://tcitransportation.com/lakeland-fl/">
+            <img src="https://tcitransportation.com/wp-content/uploads/Lakeland_TCI.png" alt="TCI Lakeland logistics operations in Florida" />
+            <div class="tci29-market-body">
+              <h3>Lakeland, FL &mdash; Regional Distribution &amp; Fleet Services</h3>
+              <p>Regional distribution and contract maintenance hub serving Florida's logistics markets with cost-effective equipment leasing and brokerage services.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="tci29-section tci29-section-white" itemscope itemtype="https://schema.org/FAQPage">
+    <div class="tci29-container">
+      <div class="tci29-head" style="justify-content:center;text-align:center;">
+        <div>
+          <h2>Frequently asked questions</h2>
+          <p>Common questions about TCI Transportation's services, fleet leasing, and logistics solutions.</p>
+        </div>
+      </div>
+
+      <div class="tci29-faq-list">
+        <div class="tci29-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="tci29-faq-q" aria-expanded="false" itemprop="name">What services does TCI Transportation offer?<span class="tci29-faq-icon">+</span></button>
+          <div class="tci29-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="tci29-faq-a-inner" itemprop="text">TCI provides dedicated logistics, full-service truck leasing, contract maintenance, commercial rentals, brokerage, and intermodal shipping. With over 45 years of experience and 29 locations nationwide, we help businesses optimize their transportation operations from coast to coast.</div>
+          </div>
+        </div>
+
+        <div class="tci29-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="tci29-faq-q" aria-expanded="false" itemprop="name">What is included in a TCI full-service lease?<span class="tci29-faq-icon">+</span></button>
+          <div class="tci29-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="tci29-faq-a-inner" itemprop="text">A full-service lease includes maintenance, unscheduled repairs, tires, 24/7 road service and support, and substitute vehicles when the truck is down for mechanical repairs. Additional services such as safety programs, IFTA fuel tax reporting, electronic trip reporting, truck washing, and licensing/registration can also be included.</div>
+          </div>
+        </div>
+
+        <div class="tci29-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="tci29-faq-q" aria-expanded="false" itemprop="name">What types of vehicles does TCI offer for lease or rental?<span class="tci29-faq-icon">+</span></button>
+          <div class="tci29-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="tci29-faq-a-inner" itemprop="text">TCI offers a wide range of vehicles including day cab and sleeper tractors, dry van straight trucks, refrigerated straight trucks, yard spotters, dry van and refrigerated semi-trailers, cargo vans, and electric vehicles. Vehicles can be tailored to your specific application.</div>
+          </div>
+        </div>
+
+        <div class="tci29-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="tci29-faq-q" aria-expanded="false" itemprop="name">Why should a company outsource its transportation?<span class="tci29-faq-icon">+</span></button>
+          <div class="tci29-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="tci29-faq-a-inner" itemprop="text">Outsourcing transportation removes the risk and cost of maintaining and purchasing a fleet, keeping up with regulations and compliance, and recruiting and managing drivers. This allows companies to focus on their core business while a dedicated logistics partner like TCI handles the complexity of freight operations.</div>
+          </div>
+        </div>
+
+        <div class="tci29-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="tci29-faq-q" aria-expanded="false" itemprop="name">Does TCI offer contract maintenance for fleets I already own?<span class="tci29-faq-icon">+</span></button>
+          <div class="tci29-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="tci29-faq-a-inner" itemprop="text">Yes. If you own your truck fleet but lack the facilities or personnel to maintain it, TCI can provide a comprehensive preventative maintenance program. This can include on-site maintenance, 24/7 breakdown support, DOT inspections, and California BIT inspections. Contracts range from one to seven years.</div>
+          </div>
+        </div>
+
+        <div class="tci29-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="tci29-faq-q" aria-expanded="false" itemprop="name">Where are TCI Transportation locations?<span class="tci29-faq-icon">+</span></button>
+          <div class="tci29-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="tci29-faq-a-inner" itemprop="text">TCI operates 29 locations across key freight markets including California, Texas, Nevada, Arizona, Illinois, Georgia, Florida, Kansas, Louisiana, and Washington. Major hubs include Los Angeles, Phoenix, Houston, Las Vegas, Dallas, Chicago, Savannah, and Tacoma.</div>
+          </div>
+        </div>
+
+        <div class="tci29-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="tci29-faq-q" aria-expanded="false" itemprop="name">What is the difference between a rental and a full-service lease?<span class="tci29-faq-icon">+</span></button>
+          <div class="tci29-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="tci29-faq-a-inner" itemprop="text">The services offered are essentially the same. Rentals are full service with rates based on a period from one day up to a year. With a full-service lease, you can have a truck built to your exact specifications with a discounted rate based on the length of the term and annual miles. Lease terms typically run between 36 and 84 months.</div>
+          </div>
+        </div>
+
+        <div class="tci29-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="tci29-faq-q" aria-expanded="false" itemprop="name">Is a down payment required for a full-service lease?<span class="tci29-faq-icon">+</span></button>
+          <div class="tci29-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="tci29-faq-a-inner" itemprop="text">No down payment is required on a full-service lease. However, a well-established commercial credit history is required to qualify.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tci29-cta-section">
+    <div class="tci29-container">
+      <div class="tci29-cta-box">
+        <h2>Partner with TCI Transportation today</h2>
+        <p>
+          Whether you need dedicated logistics, full-service truck leasing, contract maintenance,
+          commercial rentals, or intermodal shipping, TCI has the experience and nationwide
+          facilities to design a transportation solution that supports your company goals.
+        </p>
+        <div class="tci29-hero-actions" style="justify-content:center;">
+          <a class="tci29-btn tci29-btn-primary" href="https://tcitransportation.com/contact/">Contact TCI</a>
+          <a class="tci29-btn tci29-btn-secondary" href="https://tcitransportation.com/services/">View Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  (function () {
+    const locations = [
+      {
+        id: "wichita",
+        name: "Success NationalLease - TCI Company, Wichita",
+        type: "success",
+        state: "KS",
+        city: "Wichita",
+        address: "214 S Meridian Ave, Wichita, KS 67213",
+        lat: 37.6847,
+        lng: -97.3866,
+        url: "https://tcitransportation.com/wichita/"
+      },
+      {
+        id: "drop-yard-california",
+        name: "Drop Yard California",
+        type: "dropyard",
+        state: "CA",
+        city: "San Diego",
+        address: "8735 Miramar Place, San Diego, CA 92121",
+        lat: 32.8954,
+        lng: -117.1886,
+        url: "https://tcitransportation.com/locations/"
+      },
+      {
+        id: "drop-yard-florida",
+        name: "Drop Yard Florida",
+        type: "dropyard",
+        state: "FL",
+        city: "Jacksonville",
+        address: "1739 Brandy Branch Rd, Jacksonville, FL 32234",
+        lat: 30.2587,
+        lng: -81.9780,
+        url: "https://tcitransportation.com/locations/"
+      },
+      {
+        id: "drop-yard-oregon",
+        name: "Drop Yard Oregon",
+        type: "dropyard",
+        state: "OR",
+        city: "Portland",
+        address: "4490 NE Buffalo St, Portland, OR 97218",
+        lat: 45.5627,
+        lng: -122.6161,
+        url: "https://tcitransportation.com/locations/"
+      },
+      {
+        id: "drop-yard-washington",
+        name: "Drop Yard Washington",
+        type: "dropyard",
+        state: "WA",
+        city: "Union Gap",
+        address: "1250 Industrial Way, Union Gap, WA 98903",
+        lat: 46.5637,
+        lng: -120.4770,
+        url: "https://tcitransportation.com/locations/"
+      },
+      {
+        id: "arlington",
+        name: "Success NationalLease - TCI Company, Arlington",
+        type: "success",
+        state: "TX",
+        city: "Arlington",
+        address: "3324 Pinewood Dr, Arlington, TX 76010",
+        lat: 32.7240,
+        lng: -97.0547,
+        url: "https://tcitransportation.com/arlington/"
+      },
+      {
+        id: "kansas-city",
+        name: "Success NationalLease - TCI Company, Kansas City",
+        type: "success",
+        state: "KS",
+        city: "Kansas City",
+        address: "77 S James St, Kansas City, KS 66118",
+        lat: 39.1147,
+        lng: -94.6275,
+        url: "https://tcitransportation.com/kansascity/"
+      },
+      {
+        id: "bakersfield",
+        name: "TCI Bakersfield",
+        type: "terminal",
+        state: "CA",
+        city: "Mettler",
+        address: "1713 Mettler Frontage Rd, Mettler, CA 93313",
+        lat: 35.0105,
+        lng: -119.0402,
+        url: "https://tcitransportation.com/bakersfield/"
+      },
+      {
+        id: "baton-rouge",
+        name: "TCI Baton Rouge",
+        type: "terminal",
+        state: "LA",
+        city: "Baton Rouge",
+        address: "7038 S Choctaw Dr, Baton Rouge, LA 70806",
+        lat: 30.4479,
+        lng: -91.1130,
+        url: "https://tcitransportation.com/baton-rouge/"
+      },
+      {
+        id: "chicago",
+        name: "TCI Chicago",
+        type: "terminal",
+        state: "IL",
+        city: "Country Club Hills",
+        address: "4932 173rd St, Country Club Hills, IL 60478",
+        lat: 41.5731,
+        lng: -87.7220,
+        url: "https://tcitransportation.com/chicago/"
+      },
+      {
+        id: "commerce",
+        name: "TCI Commerce",
+        type: "terminal",
+        state: "CA",
+        city: "Commerce",
+        address: "4950 Triggs St, Commerce, CA 90022",
+        lat: 34.0014,
+        lng: -118.1577,
+        url: "https://tcitransportation.com/commerce/"
+      },
+      {
+        id: "dallas",
+        name: "TCI Dallas",
+        type: "terminal",
+        state: "TX",
+        city: "North Richland Hills",
+        address: "9151 Boulevard 26, North Richland Hills, TX 76180",
+        lat: 32.8446,
+        lng: -97.2140,
+        url: "https://tcitransportation.com/dallas/"
+      },
+      {
+        id: "fontana",
+        name: "TCI Fontana",
+        type: "terminal",
+        state: "CA",
+        city: "Fontana",
+        address: "14561 Merrill Ave, Fontana, CA 92335",
+        lat: 34.0922,
+        lng: -117.4362,
+        url: "https://tcitransportation.com/fontana/"
+      },
+      {
+        id: "henderson",
+        name: "TCI Henderson",
+        type: "terminal",
+        state: "NV",
+        city: "Henderson",
+        address: "513 Eastgate Rd, Henderson, NV 89011",
+        lat: 36.0682,
+        lng: -114.9543,
+        url: "https://tcitransportation.com/henderson/"
+      },
+      {
+        id: "houston",
+        name: "TCI Houston",
+        type: "terminal",
+        state: "TX",
+        city: "Humble",
+        address: "19711 Aldine Westfield Rd, Humble, TX 77338",
+        lat: 29.9938,
+        lng: -95.3475,
+        url: "https://tcitransportation.com/houston/"
+      },
+      {
+        id: "lakeland",
+        name: "TCI Lakeland",
+        type: "terminal",
+        state: "FL",
+        city: "Lakeland",
+        address: "6300 New Tampa Hwy, Lakeland, FL 33815",
+        lat: 28.0231,
+        lng: -81.9954,
+        url: "https://tcitransportation.com/lakeland-fl/"
+      },
+      {
+        id: "las-vegas",
+        name: "TCI Las Vegas",
+        type: "terminal",
+        state: "NV",
+        city: "North Las Vegas",
+        address: "2306 Crestline Loop, North Las Vegas, NV 89030",
+        lat: 36.2027,
+        lng: -115.1194,
+        url: "https://tcitransportation.com/lasvegas/"
+      },
+      {
+        id: "livermore",
+        name: "TCI Livermore",
+        type: "terminal",
+        state: "CA",
+        city: "Livermore",
+        address: "7650 Hawthorne Ave, Livermore, CA 94550",
+        lat: 37.6948,
+        lng: -121.7424,
+        url: "https://tcitransportation.com/livermore/"
+      },
+      {
+        id: "merced",
+        name: "TCI Merced",
+        type: "terminal",
+        state: "CA",
+        city: "Merced",
+        address: "116 Heron Way, Merced, CA 95341",
+        lat: 37.2720,
+        lng: -120.5106,
+        url: "https://tcitransportation.com/merced/"
+      },
+      {
+        id: "midland",
+        name: "TCI Midland",
+        type: "terminal",
+        state: "TX",
+        city: "Midland",
+        address: "5718 N FM 1788, Midland, TX 79707",
+        lat: 31.9954,
+        lng: -102.1848,
+        url: "https://tcitransportation.com/midland/"
+      },
+      {
+        id: "oakland",
+        name: "TCI Oakland",
+        type: "terminal",
+        state: "CA",
+        city: "Oakland",
+        address: "608 McClary Ave, Oakland, CA 94621",
+        lat: 37.7400,
+        lng: -122.1960,
+        url: "https://tcitransportation.com/oakland/"
+      },
+      {
+        id: "phoenix",
+        name: "TCI Phoenix",
+        type: "terminal",
+        state: "AZ",
+        city: "Phoenix",
+        address: "710 S 67th Ave, Phoenix, AZ 85043",
+        lat: 33.4429,
+        lng: -112.2023,
+        url: "https://tcitransportation.com/phoenix/"
+      },
+      {
+        id: "san-antonio",
+        name: "TCI San Antonio",
+        type: "terminal",
+        state: "TX",
+        city: "Converse",
+        address: "4320 N Craycroft Rd, Converse, TX 78109",
+        lat: 29.5181,
+        lng: -98.3173,
+        url: "https://tcitransportation.com/sanantonio/"
+      },
+      {
+        id: "san-bernardino",
+        name: "TCI San Bernardino",
+        type: "terminal",
+        state: "CA",
+        city: "San Bernardino",
+        address: "265 W Mill St, San Bernardino, CA 92408",
+        lat: 34.0757,
+        lng: -117.2882,
+        url: "https://tcitransportation.com/sanbernardino/"
+      },
+      {
+        id: "savannah",
+        name: "TCI Savannah",
+        type: "terminal",
+        state: "GA",
+        city: "Savannah",
+        address: "1907 Louisville Rd, Savannah, GA 31415",
+        lat: 32.0940,
+        lng: -81.1486,
+        url: "https://tcitransportation.com/savannah/"
+      },
+      {
+        id: "shreveport",
+        name: "TCI Shreveport",
+        type: "terminal",
+        state: "LA",
+        city: "Bossier City",
+        address: "1600 Ballpark Dr, Bossier City, LA 71111",
+        lat: 32.5147,
+        lng: -93.7140,
+        url: "https://tcitransportation.com/shreveport/"
+      },
+      {
+        id: "stockton",
+        name: "TCI Stockton",
+        type: "terminal",
+        state: "CA",
+        city: "Stockton",
+        address: "2150 West Charter Way, Stockton, CA 95206",
+        lat: 37.9288,
+        lng: -121.3314,
+        url: "https://tcitransportation.com/stockton/"
+      },
+      {
+        id: "tacoma",
+        name: "TCI Tacoma",
+        type: "terminal",
+        state: "WA",
+        city: "Puyallup",
+        address: "1011 Valley Ave NW, Puyallup, WA 98371",
+        lat: 47.1951,
+        lng: -122.2961,
+        url: "https://tcitransportation.com/tacoma/"
+      },
+      {
+        id: "walnut",
+        name: "TCI Walnut",
+        type: "terminal",
+        state: "CA",
+        city: "Walnut",
+        address: "20335 Currier Rd, Walnut, CA 91789",
+        lat: 34.0160,
+        lng: -117.8570,
+        url: "https://tcitransportation.com/walnut/"
+      }
+    ];
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function typeLabel(type) {
+      if (type === "dropyard") return "Drop Yard";
+      if (type === "success") return "Success NL";
+      return "TCI Terminal";
+    }
+
+    function markerColor(type) {
+      if (type === "dropyard") return "#4063d8";
+      if (type === "success") return "#ff8a00";
+      return "#d71920";
+    }
+
+    function mapLink(address) {
+      return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
+    }
+
+    const map = L.map("tci29-map", {
+      scrollWheelZoom: false
+    }).setView([37.5, -98.5], 4);
+
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>'
+    }).addTo(map);
+
+    const listEl = document.getElementById("tci29-location-list");
+    const searchEl = document.getElementById("tci29-search");
+    const stateFilterEl = document.getElementById("tci29-state-filter");
+    const countEl = document.getElementById("tci29-count");
+
+    const stateMap = {};
+    locations.forEach(loc => {
+      stateMap[loc.state] = true;
+    });
+
+    Object.keys(stateMap).sort().forEach(state => {
+      const option = document.createElement("option");
+      option.value = state;
+      option.textContent = state;
+      stateFilterEl.appendChild(option);
+    });
+
+    const markers = {};
+    const markerLayer = L.featureGroup().addTo(map);
+
+    locations.forEach(loc => {
+      const markerHtml = `
+        <div style="
+          width:18px;
+          height:18px;
+          border-radius:50%;
+          background:${markerColor(loc.type)};
+          border:3px solid #ffffff;
+          box-shadow:0 0 0 2px rgba(0,0,0,0.15);
+        "></div>
+      `;
+
+      const marker = L.marker([loc.lat, loc.lng], {
+        icon: L.divIcon({
+          className: "tci29-custom-marker",
+          html: markerHtml,
+          iconSize: [18, 18],
+          iconAnchor: [9, 9],
+          popupAnchor: [0, -8]
+        })
+      });
+
+      marker.bindPopup(`
+        <div class="tci29-popup">
+          <h4>${escapeHtml(loc.name)}</h4>
+          <p>${escapeHtml(loc.address)}</p>
+          <a href="${loc.url}" ${loc.url === "#" ? 'onclick="return false;"' : ""}>View location</a>
+          <a href="${mapLink(loc.address)}" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      `);
+
+      marker.on("click", function () {
+        setActiveCard(loc.id);
+      });
+
+      marker.addTo(markerLayer);
+      markers[loc.id] = marker;
+    });
+
+    function renderList(data) {
+      listEl.innerHTML = "";
+
+      if (!data.length) {
+        listEl.innerHTML = `
+          <div class="tci29-card">
+            <h3>No locations found</h3>
+            <p>Try a different search term or remove the state filter.</p>
+          </div>
+        `;
+        countEl.textContent = "0 Locations";
+        return;
+      }
+
+      data.forEach(loc => {
+        const card = document.createElement("article");
+        card.className = "tci29-card";
+        card.setAttribute("data-id", loc.id);
+
+        card.innerHTML = `
+          <div class="tci29-card-top">
+            <span class="tci29-card-type">${escapeHtml(typeLabel(loc.type))}</span>
+            <span class="tci29-card-state">${escapeHtml(loc.state)}</span>
+          </div>
+          <h3>${escapeHtml(loc.name)}</h3>
+          <p>${escapeHtml(loc.city + ", " + loc.state)}<br>${escapeHtml(loc.address)}</p>
+          <div class="tci29-card-actions">
+            <a class="tci29-card-link tci29-card-link--page" href="${loc.url}" ${loc.url === "#" ? 'onclick="return false;"' : ""}>View Page</a>
+            <a class="tci29-card-link tci29-card-link--map" href="${mapLink(loc.address)}" target="_blank" rel="noopener">Google Maps</a>
+          </div>
+        `;
+
+        card.addEventListener("click", function (e) {
+          if (e.target.tagName.toLowerCase() === "a") return;
+          focusLocation(loc.id);
+        });
+
+        listEl.appendChild(card);
+      });
+
+      countEl.textContent = data.length + (data.length === 1 ? " Location" : " Locations");
+    }
+
+    function setActiveCard(id) {
+      document.querySelectorAll(".tci29-card").forEach(card => {
+        card.classList.toggle("is-active", card.getAttribute("data-id") === id);
+      });
+    }
+
+    function focusLocation(id) {
+      const loc = locations.find(item => item.id === id);
+      if (!loc || !markers[id]) return;
+
+      map.flyTo([loc.lat, loc.lng], 9, { duration: 0.8 });
+      markers[id].openPopup();
+      setActiveCard(id);
+
+      const card = document.querySelector('.tci29-card[data-id="' + id + '"]');
+      if (card) {
+        card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+    }
+
+    function applyFilters() {
+      const searchTerm = searchEl.value.trim().toLowerCase();
+      const selectedState = stateFilterEl.value;
+
+      const filtered = locations.filter(loc => {
+        const haystack = [
+          loc.name,
+          loc.city,
+          loc.state,
+          loc.address,
+          typeLabel(loc.type)
+        ].join(" ").toLowerCase();
+
+        const matchesSearch = !searchTerm || haystack.includes(searchTerm);
+        const matchesState = selectedState === "all" || loc.state === selectedState;
+
+        return matchesSearch && matchesState;
+      });
+
+      renderList(filtered);
+
+      markerLayer.clearLayers();
+
+      const visibleMarkers = [];
+      filtered.forEach(loc => {
+        markers[loc.id].addTo(markerLayer);
+        visibleMarkers.push(markers[loc.id]);
+      });
+
+      if (visibleMarkers.length > 1) {
+        const group = L.featureGroup(visibleMarkers);
+        map.fitBounds(group.getBounds().pad(0.18));
+      } else if (visibleMarkers.length === 1) {
+        const loc = filtered[0];
+        map.setView([loc.lat, loc.lng], 9);
+      } else {
+        map.setView([37.5, -98.5], 4);
+      }
+    }
+
+    searchEl.addEventListener("input", applyFilters);
+    stateFilterEl.addEventListener("change", applyFilters);
+
+    renderList(locations);
+    map.fitBounds(markerLayer.getBounds().pad(0.18));
+
+    setTimeout(function () {
+      map.invalidateSize();
+    }, 400);
+
+    window.addEventListener("resize", function () {
+      map.invalidateSize();
+    });
+  })();
+
+  // FAQ accordion
+  document.querySelectorAll('.tci29-faq-q').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.tci29-faq-item');
+      var answer = item.querySelector('.tci29-faq-a');
+      var isOpen = item.classList.contains('is-open');
+
+      // Close all
+      document.querySelectorAll('.tci29-faq-item.is-open').forEach(function (openItem) {
+        openItem.classList.remove('is-open');
+        openItem.querySelector('.tci29-faq-q').setAttribute('aria-expanded', 'false');
+        openItem.querySelector('.tci29-faq-a').style.maxHeight = null;
+      });
+
+      // Open clicked if it was closed
+      if (!isOpen) {
+        item.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does TCI Transportation offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TCI provides dedicated logistics, full-service truck leasing, contract maintenance, commercial rentals, brokerage, and intermodal shipping. With over 45 years of experience and 29 locations nationwide, we help businesses optimize their transportation operations from coast to coast."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in a TCI full-service lease?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full-service lease includes maintenance, unscheduled repairs, tires, 24/7 road service and support, and substitute vehicles when the truck is down for mechanical repairs. Additional services such as safety programs, IFTA fuel tax reporting, electronic trip reporting, truck washing, and licensing/registration can also be included."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of vehicles does TCI offer for lease or rental?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TCI offers a wide range of vehicles including day cab and sleeper tractors, dry van straight trucks, refrigerated straight trucks, yard spotters, dry van and refrigerated semi-trailers, cargo vans, and electric vehicles. Vehicles can be tailored to your specific application."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why should a company outsource its transportation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Outsourcing transportation removes the risk and cost of maintaining and purchasing a fleet, keeping up with regulations and compliance, and recruiting and managing drivers. This allows companies to focus on their core business while a dedicated logistics partner like TCI handles the complexity of freight operations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TCI offer contract maintenance for fleets I already own?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If you own your truck fleet but lack the facilities or personnel to maintain it, TCI can provide a comprehensive preventative maintenance program. This can include on-site maintenance, 24/7 breakdown support, DOT inspections, and California BIT inspections. Contracts range from one to seven years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are TCI Transportation locations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TCI operates 29 locations across key freight markets including California, Texas, Nevada, Arizona, Illinois, Georgia, Florida, Kansas, Louisiana, and Washington. Major hubs include Los Angeles, Phoenix, Houston, Las Vegas, Dallas, Chicago, Savannah, and Tacoma."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a rental and a full-service lease?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The services offered are essentially the same. Rentals are full service with rates based on a period from one day up to a year. With a full-service lease, you can have a truck built to your exact specifications with a discounted rate based on the length of the term and annual miles. Lease terms typically run between 36 and 84 months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a down payment required for a full-service lease?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No down payment is required on a full-service lease. However, a well-established commercial credit history is required to qualify."
+      }
+    }
+  ]
+}
+</script>
