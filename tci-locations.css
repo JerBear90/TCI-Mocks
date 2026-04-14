@@ -337,6 +337,7 @@
   letter-spacing: -0.03em;
   color: #fff;
   max-width: 760px;
+  text-transform: capitalize;
 }
 
 .tci29-hero p {
@@ -652,6 +653,7 @@
   line-height: 1;
   letter-spacing: -0.03em;
   color: #fff;
+  text-transform: capitalize;
 }
 
 .tci-phx-hero p {
