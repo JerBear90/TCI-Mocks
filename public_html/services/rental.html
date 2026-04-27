@@ -1,0 +1,187 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" />
+<link rel="stylesheet" href="../tci-locations.css" />
+
+<style>
+  .tci-svc-wrap{--tci-red:#d71920;--tci-red-dark:#b8161c;--tci-max:1280px;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;width:100vw;max-width:100vw;background:#fff;color:#111;font-family:"Montserrat",Arial,Helvetica,sans-serif!important;overflow:hidden}
+  .tci-svc-wrap *{box-sizing:border-box}
+  .tci-svc-container{width:min(calc(100% - 32px),var(--tci-max));margin:0 auto}
+  .tci-svc-hero{position:relative;min-height:440px;display:flex;align-items:center;color:#fff;overflow:hidden;background:linear-gradient(135deg,rgba(17,17,17,.88) 0%,rgba(29,29,29,.78) 100%),url('/wp-content/uploads/2021/10/home-service-boxes-04.jpg') center/cover no-repeat}
+  .tci-svc-hero-inner{position:relative;z-index:1;padding:88px 0 70px;max-width:760px}
+  .tci-svc-hero-eyebrow{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#d5d5d5;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+  .tci-svc-hero h1{margin:0 0 18px;font-size:clamp(2.4rem,5vw,4rem);line-height:.98;letter-spacing:-.03em;font-weight:800;color:#fff;text-transform:capitalize}
+  .tci-svc-hero p{margin:0;color:#c8c8c8;font-size:1.04rem;line-height:1.75}
+  .tci-svc-section{padding:76px 0}.tci-svc-section-light{background:#f5f5f5}.tci-svc-section-white{background:#fff}
+  .tci-svc-detail{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .tci-svc-detail.is-reversed{direction:rtl}.tci-svc-detail.is-reversed>*{direction:ltr}
+  .tci-svc-detail-img{border-radius:20px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.10)}
+  .tci-svc-detail-img img{width:100%;height:420px;object-fit:cover;display:block}
+  .tci-svc-detail-text h2{margin:0 0 8px;font-size:clamp(1.6rem,2.5vw,2.2rem);line-height:1.1;letter-spacing:-.02em;color:#111}
+  .tci-svc-detail-text .tci-svc-label{display:inline-block;padding:4px 12px;border-radius:999px;background:#f2f2f2;color:var(--tci-red);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
+  .tci-svc-detail-text p{margin:0 0 16px;color:#5e5e5e;font-size:.95rem;line-height:1.7}
+  .tci-svc-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .22s ease}
+  .tci-svc-btn-primary{background:var(--tci-red);color:#fff}.tci-svc-btn-primary:hover{background:var(--tci-red-dark);transform:translateY(-1px)}
+  .tci-svc-btn-dark{background:#111;color:#fff}.tci-svc-btn-dark:hover{background:#000;transform:translateY(-1px)}
+  .tci-svc-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px}
+  .tci-svc-highlight{background:#fff;border:1px solid #e2e2e2;border-radius:18px;padding:24px;box-shadow:0 10px 28px rgba(0,0,0,.05)}
+  .tci-svc-highlight h3{margin:0 0 8px;font-size:1.05rem;color:#111}.tci-svc-highlight p{margin:0;color:#5e5e5e;font-size:.9rem;line-height:1.6}
+  .tci-svc-testimonial{background:#f5f5f5;padding:48px 0}
+  .tci-svc-testimonial blockquote{max-width:800px;margin:0 auto;text-align:center;font-size:1.1rem;line-height:1.7;color:#333;font-style:italic}
+  .tci-svc-testimonial cite{display:block;margin-top:14px;font-size:.9rem;color:#888;font-style:normal}
+  .tci-svc-cta{background:linear-gradient(135deg,rgba(17,17,17,.92) 0%,rgba(29,29,29,.92) 100%),url('/wp-content/uploads/TCI-Services-Freight-Factoring.jpg') center/cover no-repeat;color:#fff;padding:76px 0}
+  .tci-svc-cta-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:48px;text-align:center}
+  .tci-svc-cta-box h2{margin:0 0 14px;font-size:clamp(1.9rem,3vw,2.8rem);color:#fff;line-height:1.05}
+  .tci-svc-cta-box p{margin:0 auto 24px;max-width:700px;color:#c8c8c8;line-height:1.7;font-size:1rem}
+  .tci-svc-cta-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .tci-svc-btn-secondary{border:1px solid rgba(255,255,255,.2);color:#fff;background:transparent}.tci-svc-btn-secondary:hover{background:rgba(255,255,255,.08);transform:translateY(-1px)}
+  .tci-svc-related{padding:76px 0;background:#fff}
+  .tci-svc-related h2{text-align:center;margin:0 0 32px;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.08;letter-spacing:-.02em;color:#111}
+  .tci-svc-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .tci-svc-related-grid a{display:block;background:#f5f5f5;border:1px solid #e2e2e2;border-radius:18px;padding:24px;text-decoration:none;transition:all .22s ease;color:#111;font-weight:700;font-size:.95rem}
+  .tci-svc-related-grid a:hover{background:var(--tci-red);color:#fff;border-color:var(--tci-red)}
+  .tci-svc-related-grid a span{display:block;margin-top:6px;font-weight:400;font-size:.85rem;color:#5e5e5e}
+  .tci-svc-related-grid a:hover span{color:rgba(255,255,255,.8)}
+  @media(max-width:1100px){.tci-svc-detail{grid-template-columns:1fr}.tci-svc-detail.is-reversed{direction:ltr}.tci-svc-highlights,.tci-svc-related-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:767px){.tci-svc-container{width:min(calc(100% - 22px),var(--tci-max))}.tci-svc-hero{min-height:380px}.tci-svc-hero-inner{padding:60px 0 50px}.tci-svc-section,.tci-svc-cta,.tci-svc-related{padding:56px 0}.tci-svc-highlights,.tci-svc-related-grid{grid-template-columns:1fr}.tci-svc-detail-img img{height:280px}.tci-svc-cta-box{padding:30px 22px}}
+</style>
+
+<div class="tci-svc-wrap">
+
+  <nav style="padding:14px 0;font-size:.85rem;color:#888;" aria-label="Breadcrumb">
+    <div class="tci-svc-container">
+      <a href="https://tcitransportation.com/" style="color:#666;text-decoration:none;">Home</a>
+      <span style="margin:0 6px;">/</span>
+      <a href="https://tcitransportation.com/services/" style="color:#666;text-decoration:none;">Services</a>
+      <span style="margin:0 6px;">/</span>
+      Commercial Rental
+    </div>
+  </nav>
+
+  <section class="tci-svc-hero">
+    <div class="tci-svc-container">
+      <div class="tci-svc-hero-inner">
+        <div class="tci-svc-hero-eyebrow">TCI Commercial Rental</div>
+        <h1>What you need, when, and where you need it.</h1>
+        <p>TCI Transportation provides commercial truck rental services for businesses that need reliable transportation equipment without long-term ownership commitments. Our flexible rental programs allow companies to quickly access well-maintained trucks, tractors, and fleet equipment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tci-svc-section tci-svc-section-white">
+    <div class="tci-svc-container">
+      <div class="tci-svc-detail">
+        <div class="tci-svc-detail-img">
+          <img src="/wp-content/uploads/2021/10/home-service-boxes-04.jpg" alt="TCI commercial truck rental fleet" />
+        </div>
+        <div class="tci-svc-detail-text">
+          <span class="tci-svc-label">Rental Services</span>
+          <h2>Short-Term &amp; Long-Term Rentals</h2>
+          <p>Most commercial truck rentals last anywhere from a few days to a few months. At TCI, we offer both short-term rentals and long-term leases to ensure all your equipment needs are met on your schedule.</p>
+          <p>We find short-term rentals are the perfect supplement to your existing fleet and a great alternative if you need extra equipment for a project that you can't justify purchasing or leasing in the long term.</p>
+          <a class="tci-svc-btn tci-svc-btn-primary" href="https://tcitransportation.com/contact/">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tci-svc-section tci-svc-section-light">
+    <div class="tci-svc-container">
+      <div class="tci-svc-detail is-reversed">
+        <div class="tci-svc-detail-img">
+          <img src="/wp-content/uploads/2021/10/home-service-boxes-04.jpg" alt="TCI rental options" />
+        </div>
+        <div class="tci-svc-detail-text">
+          <span class="tci-svc-label">Best Option</span>
+          <h2>Is a Short-Term Rental Your Best Option?</h2>
+          <p>Depending on your business, a commercial truck rental may be a cost-effective way to supplement your fleet with extra equipment you don't need in the long term. If you only foresee needing equipment for a few months or less, a short-term rental is likely the most budget-friendly approach.</p>
+          <p>This makes commercial truck rentals suitable for everything from emergency equipment back-ups to seasonal businesses where your company simply doesn't need equipment year-round.</p>
+          <a class="tci-svc-btn tci-svc-btn-dark" href="https://tcitransportation.com/contact/">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tci-svc-section tci-svc-section-white">
+    <div class="tci-svc-container">
+      <div style="text-align:center;margin-bottom:12px;">
+        <h2 style="margin:0 0 12px;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.08;letter-spacing:-.02em;color:#111;">3 Reasons to Rent with TCI</h2>
+      </div>
+      <div class="tci-svc-highlights">
+        <div class="tci-svc-highlight">
+          <h3>Extensive Inventory</h3>
+          <p>Light-duty and medium-duty trucks, dry and refrigerated trucks, daycab and sleeper tractors, trailers, and yard tractors.</p>
+        </div>
+        <div class="tci-svc-highlight">
+          <h3>Competitive Pricing</h3>
+          <p>Well-maintained, fuel-efficient vehicles with volume and long-term rental rates tailored to fit your exact needs and operating budget.</p>
+        </div>
+        <div class="tci-svc-highlight">
+          <h3>Outstanding Service</h3>
+          <p>Quick and friendly check-in and out, along with local and national service and support for every rental.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tci-svc-testimonial">
+    <div class="tci-svc-container">
+      <blockquote>
+        &ldquo;Whenever the need to rent a commercial vehicle arises &ndash; TCI is a great resource as they have every type of vehicle we use. More recently they have even added low-emission EV and CNG units.&rdquo;
+        <cite>&mdash; Patricia S.</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="tci-svc-section tci-svc-section-light">
+    <div class="tci-svc-container">
+      <div class="tci-svc-detail">
+        <div class="tci-svc-detail-img">
+          <img src="/wp-content/uploads/2021/10/home-service-boxes-04.jpg" alt="TCI largest independent transportation company" />
+        </div>
+        <div class="tci-svc-detail-text">
+          <span class="tci-svc-label">Nationwide</span>
+          <h2>One of the Largest Independent Transportation Companies</h2>
+          <p>TCI has enjoyed consistent growth since its inception in 1978. We are now the largest independent provider of transportation services in the western United States with full-service facilities to support you throughout the country.</p>
+          <p>Our customer retention rate is among the highest in the industry.</p>
+          <a class="tci-svc-btn tci-svc-btn-primary" href="https://tcitransportation.com/contact/">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tci-svc-related">
+    <div class="tci-svc-container">
+      <h2>Related Services</h2>
+      <div class="tci-svc-related-grid">
+        <a href="dedicated.html">Dedicated Logistics<span>Complete fleet management and experienced drivers.</span></a>
+        <a href="leasing.html">Full-Service Leasing<span>Safe, reliable equipment with comprehensive maintenance.</span></a>
+        <a href="maintenance.html">Contract Maintenance<span>Custom-tailored preventative maintenance programs.</span></a>
+        <a href="brokerage.html">Brokerage<span>Cost-effective freight brokerage solutions.</span></a>
+        <a href="intermodal.html">Intermodal Shipping<span>Coast-to-coast port drayage services.</span></a>
+        <a href="truckload.html">Truckload<span>Full truckload capacity solutions nationwide.</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tci-svc-cta">
+    <div class="tci-svc-container">
+      <div class="tci-svc-cta-box">
+        <h2>Need equipment today?</h2>
+        <p>Commercial truck rentals are available on your schedule and for all your equipment needs. Drop us a note or give us a call to learn more.</p>
+        <div class="tci-svc-cta-actions">
+          <a class="tci-svc-btn tci-svc-btn-primary" href="https://tcitransportation.com/contact/">Contact TCI</a>
+          <a class="tci-svc-btn tci-svc-btn-secondary" href="https://tcitransportation.com/locations/">Find a Location</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","provider":{"@type":"Organization","name":"TCI Transportation","url":"https://tcitransportation.com/"},"name":"Commercial Truck Rental","description":"Flexible commercial truck rental services for short-term, seasonal, or emergency transportation needs at competitive pricing.","areaServed":"United States"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tcitransportation.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://tcitransportation.com/services/"},{"@type":"ListItem","position":3,"name":"Commercial Rental","item":"https://tcitransportation.com/services/rental/"}]}
+</script>
