@@ -1,0 +1,12 @@
+{
+	"type":"fieldset",
+	"name":"header",
+	"title":"Header",
+	"fields":{
+		"html_field":{
+			"type":"textarea",
+			"label":"HTML",
+			"key":"html"
+		}
+	}
+}

@@ -1,0 +1,61 @@
+{
+	"type":"fieldset",
+	"name":"post",
+	"title":"Post List",
+	"fields":{
+		"post_type_field":{
+			"label":"Post Type",
+			"type":"text",
+			"std":"post",
+			"key":"post_type"
+		},
+		"post_status_field":{
+			"label":"Post Status",
+			"type":"select",
+			"key":"post_status",
+			"options":{
+				"publish":"Published",
+				"private":"Private",
+				"draft":"Draft",
+				"any":"Any"
+			},
+			"std":"publish"
+		},
+		"orderby_field":{
+			"label":"Order By",
+			"type":"select",
+			"key":"orderby",
+			"options":{
+				"ID":"Post Id",
+				"author":"Post Author",
+				"title":"Post Title",
+				"name":"Post Slug",
+				"date":"Post Creation Date",
+				"modified":"Post Modified Date",
+				"parent":"Post Parent ID",
+				"rand":"Random",
+				"comment_count":"Comment Count",
+				"menu_order":"Menu Order"
+			}
+		},
+		"order_field":{
+			"label":"Order",
+			"type":"select",
+			"key":"order",
+			"options":{
+				"ASC":"Ascending",
+				"DESC":"Descending"
+			}
+		},
+		"mode_field":{
+			"label":"Display Mode",
+			"type":"select",
+			"key":"mode",
+			"options":{
+				"checkboxes":"Checkboxes",
+				"horizontal-group":"Horizontal Radio Group"
+			},
+			"empty":"Drop Down"
+		}
+	}
+}

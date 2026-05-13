@@ -1,0 +1,12 @@
+{
+	"type":"fieldset",
+	"name":"email",
+	"label":"Email",
+	"fields":{
+		"placeholder_field":{
+			"type":"text",
+			"label":"Placeholder",
+			"key":"placeholder"
+		}
+	}
+}

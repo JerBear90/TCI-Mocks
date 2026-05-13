@@ -1,0 +1,29 @@
+{
+    "type":"fieldset",
+    "bdClass":"row",
+    "fields":{
+        "keyLabel":{
+            "type":"text",
+            "class":"col-md-6",
+            "key":"labels.key",
+            "label":"Key Label"
+        },
+        "valueLabel":{
+            "type":"text",
+            "class":"col-md-6",
+            "key":"labels.value",
+            "label":"Value Label"
+        },
+        "std_field":{
+			"class":"col-md-12",
+			"label":"Default",
+			"type":"key-value",
+			"key":"std",
+			"tooltip":"Use option 'other' to allow any value",
+			"labels":{
+				"key":"Key",
+				"value":"Value"
+			}
+		}
+    }
+}

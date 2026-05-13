@@ -1,0 +1,10 @@
+{
+	"field-1":{
+		"type":"text",
+		"label":"Field 1"
+	},
+	"submit":{
+		"type":"submit",
+		"label":"Submit"
+	}
+}

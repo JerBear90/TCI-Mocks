@@ -1,0 +1,14 @@
+{
+	"args":{
+		"name":"form-builder",
+		"action":"build_form",
+		"css_id":"form-builder"
+	},
+	"fields":{
+		"class":"form_fields tab sel",
+		"id":"tab-fields",
+		"type":"minilist",
+		"label":"Fields",
+		"nowrap":"true"
+	}
+}

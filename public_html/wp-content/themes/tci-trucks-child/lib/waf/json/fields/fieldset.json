@@ -1,0 +1,92 @@
+{
+	"type":"fieldset",
+	"name":"default",
+	"desc":"Fieldsets are saved to a separate file to allow them to be re-used in other forms.  If you wish to use a previously created fieldset, select the filename from the list below",
+	"fields":{
+		"legend_field":{
+			"type":"text",
+			"label":"Legend",
+			"key":"legend"
+		},
+		"title_field":{
+			"type":"text",
+			"label":"Title",
+			"key":"title"
+		},
+		"use_array_field":{
+			"type":"checkbox",
+			"label":"Store data in array",
+			"key":"use_array",
+			"tootlip":"If selected, values will show up in $_REQUEST underneath an array with the fieldset id",
+			"advanced":true
+		},
+		"existing_field":{
+			"type":"fieldset-src",
+			"key":"existing",
+			"input_class":"src_field",
+			"label":"Filename",
+			"class":"existing_field",
+			"tooltip":"(Optional) Select existing fieldset from this list to re-use fields from an existing fieldset. A new fieldset will be created if none is specified.",
+			"data":{
+				"confirm":"Warning: Changing src file will close the fieldset you are currently editing",
+				"value-type":"nospaces"
+			}
+		},
+		"copy_field":{
+			"type":"button",
+			"text":"Copy Existing",
+			"tooltip":"Create a new fieldset by copying fields from existing fieldset",
+			"data":{
+				"action":"copy-fieldset"
+			},
+			"use_popup":"true",
+			"popup_form":{
+				"copy_file":{
+					"label":"File",
+					"type":"fieldset-src",
+					"input_class":"src",
+					"hide_other":"true",
+					"required":"true",
+					"name":"src",
+					"data":{
+						"required":"true"
+					}
+				},
+				"copy_name":{
+					"type":"text",
+					"label":"Name",
+					"required":"true",
+					"name":"name",
+					"data":{
+						"required":"true",
+						"value-type":"nospaces"	
+					}
+				}
+			}
+		},
+		
+		"edit_field":{
+			"type":"button",
+			"input_class":"button-primary edit-fieldset",
+			"href":"#",
+			"text":"Edit Fieldset"
+		},
+		"delete_field":{
+			"type":"button",
+			"input_class":"button-primary delete-fieldset",
+			"href":"#",
+			"text":"Delete Fields",
+			"tooltip":"Delete the fieldset definition.  **Important: This will remove the fields from any form using this fieldset!  Select 'create new' from the 'Fieldset to use' field if you want to preserve existing fieldset for use in other forms",
+			"data":{
+				"message":"**Important: This will remove fields from all forms using this fieldset!**Are you sure you want to delete fields?  Select 'create new' from the 'Fieldset to use' field if you wish to preserve fields for use in other forms."
+			}
+		},
+		"src_field":{
+			"type":"text",
+			"key":"src",
+			"label":"Using file",
+			"input_class":"src_field",
+			"allow_value":"true"
+		}
+	}
+}

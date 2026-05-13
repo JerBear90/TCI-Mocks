@@ -1,0 +1,12 @@
+{
+	"type":"fieldset",
+	"name":"submit",
+	"label":"Submit",
+	"fields":{
+		"value_field":{
+			"type":"text",
+			"label":"Value (button label)",
+			"key":"value"
+		}
+	}
+}

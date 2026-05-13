@@ -1,0 +1,18 @@
+{
+	"type":"fieldset",
+	"name":"html",
+	"title":"HTML",
+	"fields":{
+		"html_field":{
+			"type":"textarea",
+			"label":"HTML",
+			"key":"html"
+		},
+		"outerhtml_field":{
+			"type":"textarea",
+			"label":"OuterHTML",
+			"key":"outerhtml",
+			"tooltip":"Using outerhtml instead of html will skip the '.form-p' container div"
+		}
+	}
+}

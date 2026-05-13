@@ -1,0 +1,35 @@
+{
+	"type":"fieldset",
+	"name":"checkboxes",
+	"title":"Checkbox Group",
+	"fields":{
+		"options_field":{
+			"label":"Options",
+			"type":"key-value",
+			"key":"options",
+			"keys":{
+				"key":"value",
+				"value":"label"
+			},
+			"labels":{
+				"key":"Value",
+				"value":"Label"
+			}
+		},
+		"side_field":{
+			"label":"Label Side",
+			"type":"select",
+			"key":"side",
+			"options":{
+				"right":"Right",
+				"left":"Left"
+			},
+			"std":"right"
+		},
+		"sortable":{
+			"type":"checkbox",
+			"key":"sortable",
+			"label":"Sortable"
+		}
+	}
+}

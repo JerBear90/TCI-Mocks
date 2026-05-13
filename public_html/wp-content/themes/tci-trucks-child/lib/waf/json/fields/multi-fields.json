@@ -1,0 +1,13 @@
+{
+	"type":"fieldset",
+	"name":"multi-fields",
+	"title":"Multiple Fields",
+	"fields":{
+		"fields":{
+			"type":"minifields",
+			"label":"Fields",
+			"key":"fields",
+			"class":"clear"
+		}
+	}
+}

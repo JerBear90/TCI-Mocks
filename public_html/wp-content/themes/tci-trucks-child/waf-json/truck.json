@@ -1,0 +1,56 @@
+{
+    "args": {
+        "url": "/wp-json/tci/v1/contact",
+        "method": "post",
+        "class": "formResponsive",
+        "data": {
+            "handler": "simple",
+            "messages": {
+                "invalid": "Please make sure to fill in all required fields"
+            }
+        }
+    },
+    "hd":{
+        "type":"html",
+        "html":"<h5>Email Us</h5>"
+    },
+    "form":{
+        "type":"hidden",
+        "value":"truck"
+    },
+    "yourname": {
+        "label": "Name",
+        "required": true
+    },
+    "phone": {
+        "label": "Phone",
+        "required": true
+    },
+    "email": {
+        "label": "Email",
+        "required": true
+    },
+    "comment": {
+        "label": "Comments or Questions",
+        "type": "textarea",
+        "required": true
+    },
+    "mailchimp":{
+        "label":"Sign me up for the TCI newsletter!",
+        "type":"checkbox",
+        "value":true
+    },
+    "truck":{
+        "label":"Truck"
+    },
+    "submit": {
+        "type": "submit",
+        "text": "Send",
+        "inputClass": "rsform-submit-button"
+    },
+    "reset": {
+        "value": "Reset",
+        "type": "reset",
+        "inputClass": "rsform-reset-button button"
+    }
+}

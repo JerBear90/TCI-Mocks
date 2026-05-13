@@ -1,0 +1,210 @@
+{
+   "name":"mini-fields-editor",
+   "type":"form-editor",
+   "remove_text":"Delete",
+   "field_header":"Field %d",
+   "form":{
+		"preview-field":{
+			"type":"button",
+			"text":"Preview Field",
+			"class":"clear",
+			"input_class":"preview-field",
+			"tooltip":"Preview will show options set on the 'Settings' tab.",
+			"data":{
+				"action":"preview-field"
+			}
+		},
+		"nav":{
+			"type":"minifields-nav",
+			"nowrap":"true"
+		},
+		"std":{
+			"type":"fieldset",
+			"legend":"Field",
+			"name_field":{
+					"type":"text",
+					"class":"primary",
+					"label":"Field ID",
+					"key":"name",
+					"required":"true"
+				},
+			"label_field":{
+				"type":"text",
+				"class":"primary",
+				"label":"Label",
+				"key":"label"
+			},
+			
+			"type_field":{
+			   "type":"select",
+			   "class":"primary",
+			   "label":"Type",
+			   "key":"type",
+			   "required":"true",
+			   "empty":"",
+			   "grouped":"true",
+			   "options":{
+					"group":{
+						"label":"Field Groups",
+						"options":{
+							"fieldset":"Fieldset",
+							"multi-fields":"Multi Fields",
+							"table":"Table",
+							"key-value":"Keys & Values"
+						}
+					},
+					"simple":{
+						"label":"Simple Inputs",
+						"options":{
+							"text":"Text",
+							"textarea":"Text Area",
+							"email":"Email",
+							"password":"Password",
+							"checkbox":"Checkbox",
+							"datepicker":"DatePicker",
+							"tinymce":"WP Content Editor",
+							"hidden":"Hidden"
+						}
+					},
+					"file":{
+						"label":"File Inputs",
+						"options":{
+							"file":"File"
+						}
+					},
+					"choice":{
+						"label":"Choice Fields",
+						"options":{
+							"checkboxes":"Checkboxes",
+							"radios":"Radio Box",
+							"select":"Select"
+						}
+					},
+					"action":{
+						"label":"Action Fields",
+						"options":{
+							"button":"Button",
+							"submit":"Submit",
+							"link":"Link"
+						}
+					},
+					"security":{
+						"label":"Security",
+						"options":{
+							"captcha":"Captcha"
+						}
+					},
+					"display":{
+						"label":"Information Display",
+						"options":{
+							"header":"Header (h2)",
+							"info":"info",
+							"html":"HTML"
+						}
+					},
+					"wp":{
+						"label":"Wordpress Fields",
+						"options":{
+							"post":"Post List",
+							"page":"Page List",
+							"post-type":"Post Type List",
+							"page-template":"Page Templates List",
+							"term-list":"Terms in Category/Taxonomy",
+							"taxonomy":"List of Taxonomies",
+							"image-size":"Wordpress Image Sizes"
+						}
+					},
+					"user":{
+						"label":"User Created",
+						"options":{
+							
+						}
+					},
+					"hidden":{
+						"label":"Internal Use Only;Not Shown",
+						"options":{
+							"fieldlist":"Field List (form builder)"
+							
+						}
+					}
+			   }
+			},
+			"tooltip_field":{
+				"type":"textarea",
+				"label":"Tooltip",
+				"key":"tooltip"
+			},
+			"invalid_field":{
+				"type":"textarea",
+				"label":"Invalid Message",
+				"key":"invalid"
+			},
+			"desc_field":{
+				"type":"textarea",
+				"label":"Description",
+				"key":"desc"
+			},
+			"std_field":{
+				"type":"textarea",
+				"label":"Default Value",
+				"key":"std",
+				"tooltip":"Use this field to auto-fill input with a value"
+			},
+			"required_field":{
+				"type":"checkbox",
+				"label":"Required",
+				"key":"required",
+				"side":"left"
+			},
+			"one_click_field":{
+				"type":"checkbox",
+				"label":"One Click",
+				"tooltip":"(Advanced)Use an ajax handler to process field immediately after entering value.",
+				"side":"left",
+				"advanced":"true"
+			}
+		},
+		"specific":{
+			"class":"hidden"
+		},
+		"css":{
+			"type":"fieldset",
+			"legend":"CSS",
+			"class":"hidden",
+			"id_field":{
+				"label":"CSS Id",
+				"type":"text",
+				"key":"id"
+			},
+			"class_field":{
+				"label":"CSS Class",
+				"type":"text",
+				"key":"class"
+			},
+			"input_class_field":{
+				"label":"Input Class",
+				"type":"text",
+				"key":"input_class"
+			}
+		},
+		"other-field":{
+			"type":"fieldset",
+			"legend":"Other Properties",
+			"desc":"Any extra properties included in form JSON file will show up here.",
+			"class":"hidden"
+		},
+		"data-field":{
+			"legend":"Data",
+			"type":"fieldset",
+			"advanced":"true",
+			"class":"hidden",
+			"data-field":{
+				"type":"key-value",
+				"label":"Data Attributes",
+				"tooltip":"(Advanced)Provide key value pair to include as data-* attributes",
+				"value_label":"Value",
+				"key":"data"
+			}
+		}
+	}
+}

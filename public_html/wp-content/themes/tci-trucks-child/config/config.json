@@ -1,0 +1,26 @@
+{
+    "sort_orders":{
+        "post_modified.desc": "Most Recently Updated Listings",
+        "Manufacturer.asc":"Manufacturer",
+        "Model.asc":"Model",
+        "Price.asc": "Price (Ascending)",
+        "Price.desc": "Price (Descending)",
+        "lot.asc": "Lot Number (Ascending)",
+        "StockNumber.asc": "Stock Number",
+        "_Vendor.asc":"Vendor",
+        "year.desc":"Year",
+        "tax_location.asc":"Location",
+        "post_date.desc": "Most Recently Added"
+    },
+    "details_table":"truck_details",
+    "truck-data":{
+        "StockNumber":"Stock Number",
+        "mileage":"Mileage",
+        "engine":"Engine Manufacturer",
+        "horsepower":"Horsepower",
+        "Price":"For Sale Price"
+    },
+    "truck-contact":[
+        "LocationCity", "LocationAddress", "Phone","Updated"
+    ]
+}

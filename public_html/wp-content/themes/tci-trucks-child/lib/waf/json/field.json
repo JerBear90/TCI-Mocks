@@ -1,0 +1,248 @@
+{
+   "name":"form-builder-field",
+   "type":"form-editor",
+   "remove_text":"Delete",
+   "field_header":"Field %d",
+   "form":{
+	   "args":{ 
+		   "class":"field-editor bg-info"
+	   },
+		"std":{
+			"bdClass":"row flex-wrap",
+			"fieldClass":"col",
+			"type":"fieldset",
+			"fields":{
+				"name_field":{
+					"type":"text",
+					"class":"primary col-md-4",
+					"label":"Name",
+					"key":"name",
+					"required":"true",
+					"data":{
+						"value-type":"nospaces"
+					} 
+				},
+				"label_field":{
+					"type":"text",
+					"class":"primary col-md-4",
+					"label":"Label",
+					"key":"label"
+				},
+				
+				"type_field":{
+					"type":"selectgroup",
+					"class":"primary col-md-4",
+					"label":"Type",
+					"key":"type",
+					"required":"true",
+					"empty":"",
+					"grouped":"true",
+					"options":{
+							"group":{
+								"label":"Field Groups",
+								"options":{
+									"fieldset":"Fieldset",
+									"table":"Table",
+									"key-value":"Keys Value Pairs"
+								}
+							},
+							"simple":{
+								"label":"Simple Inputs",
+								"options":{
+									"text":"Text",
+									"textarea":"Text Area",
+									"email":"Email",
+									"password":"Password",
+									"checkbox":"Checkbox",
+									"date":"Date",
+									"tinymce":"WP Content Editor",
+									"hidden":"Hidden"
+								}
+							},
+							"file":{
+								"label":"File Inputs",
+								"options":{
+									"file":"File"
+								}
+							},
+							"choice":{
+								"label":"Choice Fields",
+								"options":{
+									"checkboxes":"Checkboxes",
+									"radios":"Radio Box",
+									"select":"Select"
+								}
+							},
+							"action":{
+								"label":"Action Fields",
+								"options":{
+									"button":"Button",
+									"submit":"Submit",
+									"link":"Link"
+								}
+							},
+							"security":{
+								"label":"Security",
+								"options":{
+									"captcha":"Captcha"
+								}
+							},
+							"display":{
+								"label":"Information Display",
+								"options":{
+									"header":"Header (h3)",
+									"info":"info",
+									"html":"HTML"
+								}
+							},
+							"wp":{
+								"label":"Wordpress Fields",
+								"options":{
+									"post":"Post List",
+									"page":"Page List",
+									"post-type":"Post Type List",
+									"page-template":"Page Templates List",
+									"term-list":"Terms in Category/Taxonomy",
+									"taxonomy":"List of Taxonomies",
+									"image-size":"Wordpress Image Sizes"
+								}
+							},
+							"user":{
+								"label":"User Created",
+								"options":{
+									
+								}
+							}
+					}
+				},
+				"desc_field":{
+					"type":"textarea",
+					"label":"Description",
+					"class":"col-md-6",
+					"key":"desc"
+				},
+				"std_field":{
+					"type":"text",
+					"label":"Default Value",
+					"key":"std"
+				}
+			}
+		},
+		"messages":{
+			"type":"fieldset",
+			"legend":"Messages",
+			"fields":{
+				"tooltip_field":{
+					"type":"textarea",
+					"label":"Tooltip",
+					"key":"tooltip"
+				},
+				"invalid_field":{
+					"type":"textarea",
+					"label":"Invalid Message",
+					"key":"invalid"
+				}
+			}
+		},
+		"options":{
+			"type":"fieldset",
+			"fields":{
+				
+				"hidden_field":{
+					"type":"checkbox",
+					"key":"hidden",
+					"label":"Hidden",
+					"field_class":" "
+				},
+				"required_field":{
+					"type":"checkbox",
+					"label":"Required",
+					"key":"required",
+					"side":"left"
+				},
+				"duplicate_field":{
+					"type":"checkbox",
+					"label":"Duplicating",
+					"key":"duplicate",
+					"side":"left",
+					"tooltip":"Duplicating allows for copying field to enter multiple values"
+				},
+				"one_click_field":{
+					"type":"checkbox",
+					"label":"One Click",
+					"key":"one_click",
+					"tooltip":"(Advanced)Use an ajax handler to process field immediately after entering value.",
+					"side":"left",
+					"advanced":"true"
+				}
+			}
+		},
+		"specific":{
+			"type":"fieldset"
+		},
+		"css":{
+			"type":"fieldset",
+			"legend":"CSS",
+			"class":"mb-5","bdClass":"",
+			"fieldClass":"mb-0",
+			"inputClass":"input-sm",
+			"fields":{
+				"id_field":{
+					"label":"Id",
+					"type":"text",
+					"key":"id"
+				},
+				"class_field":{
+					"label":"Class",
+					"type":"text",
+					"key":"class"
+				},
+				"input_class_field":{
+					"label":"Input Class",
+					"type":"text",
+					"key":"input_class"
+				},
+				"css_field":{
+					"label":"CSS",
+					"key":"css",
+					"type":"textarea",
+					"tooltip":"Pro tip: Use .this to reference this field!  --.this is automatically interpretted as `#${form.name} .form-group.${name}`"
+				}
+			}
+		},
+		"other":{
+			"type":"fieldset",
+			"legend":"Other Properties",
+			"bdClass":"row border-bottom",
+			"fieldClass":"col-md-4",
+			"desc":"Anything not recognized shows up here",
+			"fields":{
+				"data-field":{
+					"type":"key-value",
+					"label":"Data Attributes",
+					"tooltip":"(Advanced)Provide key value pair to include as data-* attributes",
+					"value_label":"Value",
+					"key":"data"
+				}
+			}
+		},
+		"buttons":{
+			"type":"fieldset",
+			"class":"mt-5 d-flex justify-end",
+			"fields":{
+				"cancel":{
+					"type":"button",
+					"class":"d-inline-block cancel-field-editor",
+					"inputClass":"btn btn-danger",
+					"text":"Cancel"
+				},
+				"submit":{
+					"type":"button",
+					"class":"d-inline-block save-field-editor",
+					"inputClass":"btn btn-success",
+					"text":"Save"
+				}
+			}
+		}
+	}
+}

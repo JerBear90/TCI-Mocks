@@ -1,0 +1,35 @@
+{
+	"type":"fieldset",
+	"name":"button",
+	"title":"Button",
+	"fields":{
+		"text":{
+			"type":"text",
+			"label":"Button Text",
+			"key":"text"
+		},
+		"href":{
+			"type":"text",
+			"label":"Button href (link)",
+			"key":"href",
+			"std":"#"
+		},
+		"target":{
+			"type":"text",
+			"key":"target",
+			"label":"Button target attribute"
+		},
+		"use_popup":{
+			"type":"checkbox",
+			"input_class":"popup-form-toggle",
+			"label":"Use Popup Form",
+			"key":"use_popup"
+		},
+		"popup_form":{
+			"type":"minifields",
+			"label":"Popup Form",
+			"key":"popup_form",
+			"class":"clear"
+		}
+	}
+}

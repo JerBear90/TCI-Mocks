@@ -1,0 +1,68 @@
+{
+	"header13":{
+		"type":"header",
+		"html":"Contact Form Options"
+	},
+	"subject":{
+		"type":"text",
+		"label":"Email Subject",
+		"class":"full",
+		"key":"args[action_args][subject]"
+	},
+	"from_name_field":{
+		"label":"From Name Field",
+		"type":"field-dropdown",
+		"key":"args[action_args][from_name_field]",
+		"class":"left",
+		"conditions":{
+			"not":".form-p.from_name input:Cannot have a value in both this field & Static From Name"
+		}
+	},
+	"from_name":{
+		"label":"Static From Name",
+		"type":"text",
+		"key":"args[action_args][from_name]",
+		"class":"right",
+		"conditions":{
+			"not":".form-p.from_name_field select:Cannot have a value in both this field & From Name Field"
+		}
+	},
+	"from_email_field":{
+		"label":"From Email Field",
+		"type":"field-dropdown",
+		"key":"args[action_args][from_email_field]",
+		"class":"left",
+		"field_type":"email",
+		"conditions":{
+			"not":".form-p.from_email input:Cannot have a value in both this field & Static From Email"
+		}
+	},
+	"from_email":{
+		"label":"Static From Email",
+		"type":"text",
+		"key":"args[action_args][from_email]",
+		"class":"right",
+		"conditions":{
+			"not":".form-p.from_email_field select:Cannot have a value in both this field & From Email Field"
+		}
+	},
+	 "to":{
+		"type":"text",
+		"label":"To Address",
+		"key":"args[action_args][to]",
+		"class":"left",
+		"conditions":{
+			"not":".form-p.to_field select:Cannot have a value in both this field & To Field"
+		}
+	},
+	"to_field":{
+		"type":"field-dropdown",
+		"label":"To Field",
+		"key":"args[action_args][to_field]",
+		"class":"right",
+		"form_id":"test",
+		"conditions":{
+			"not":".form-p.to input:Cannot have a value in both this field & To Address"
+		}
+	}
+}

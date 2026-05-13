@@ -1,0 +1,177 @@
+/* = Options page
+================*/
+
+
+/* = Fieldsets
+================*/
+
+#options fieldset:first-child() {
+	display: block;
+}
+#options > .bd > fieldset {
+	/* border: 1px solid #ccc; */
+	clear: both;
+	display:none;
+	margin: 0;
+	padding:1.4em 0.5rem;
+	/* width: 1000px; */
+}
+
+
+/* = Save/Reset
+================*/
+
+#options fieldset.save-reset,
+#options fieldset.buttons {
+	border: 0 none;
+	display: block !important;
+	margin: 0;
+	position: static;
+}
+#options fieldset.save-reset legend {
+	display: none;
+}
+#options fieldset.save-reset .submit {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+#options .buttons p {
+	float: left;
+}
+#options .buttons input[name=reset] {
+	display: none;
+}
+
+
+/* = Paragraphs
+================*/
+
+
+
+/* = Descriptions
+================*/
+#options p.input {
+	padding: 10px;
+}
+#options p.input.odd {
+	background: #f4f4f4;
+}
+#options fieldset .bd > .desc {
+	clear: both;
+	display: block;
+	font-size: 16px;
+	width: 90%;
+	margin-bottom: 2rem;
+	text-align: left;
+}
+
+
+/* Image Preview
+================*/
+
+.image .preview {
+	display: block !important;
+}
+.img-preview img {
+	width: auto;
+	height: 50px;
+}
+
+/* = Form Stuff
+=========================== */
+
+/* -------------------------------------------------------------- 
+   
+   forms.css
+   * Sets up some default styling for forms
+   * Gives you classes to enhance your forms
+   
+   Usage:
+   * For text fields, use class .title or .text
+   
+-------------------------------------------------------------- */
+
+#options label       { font-weight: bold; vertical-align: top; }
+#options legend      {
+	display: none;
+}
+
+
+/* Form fields
+-------------------------------------------------------------- */
+
+
+
+
+/* multis
+=================== */
+.form-p.multi .item input {
+	float: left;
+	width: 85%;
+}
+.form-p.multi .item .remove-multi-item {
+	background: #c00;
+	border-radius: 4px;
+	color: #fff;
+	float: right;
+	width: 27px;
+	height: 27px;
+	line-height: 27px !important;
+	text-align: center;
+	text-decoration: none;
+}
+.add-multi-item {
+	background: #eee;
+	border: 1px solid #ccc;
+	clear: both;
+	display: block;
+	height: 27px;
+	line-height: 27px !important;
+	margin: 12px 0;
+	padding: 0 10px;
+	text-decoration: none;
+}
+.add-multi-item::before,
+.remove-multi-item::before {
+	font-family: icomoon;
+	line-height: 27px !important;
+}
+.add-multi-item::before {
+	margin-right: 15px;
+}
+.theme-meta h3 {
+	background: #aaa;
+	border: 1px solid #ccc;
+	margin: 0 -10px !important;
+}
+#options .item {
+	border-bottom: 1px dotted #ccc;
+	padding: 10px;
+}
+#options .item.odd {
+	background: #f4f4f4;
+}
+#options .item p {
+	border-bottom: 0 none;
+	display: inline-block;
+	width: 20%;
+}
+#options .item p input {
+	width: 80%;
+}
+
+#options p.submit {
+	padding: 0 !important;
+}
+.ui-datepicker-header {
+	width: 265px;
+}
+
+
+
+#options .third {
+	display: block;
+	float: left;
+	/* width: 33.333%; */
+}

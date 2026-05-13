@@ -1,0 +1,21 @@
+{
+	"type":"fieldset",
+	"name":"radios",
+	"title":"Radio Group",
+	"fields":{
+		"options_field":{
+			"label":"Options",
+			"type":"key-value",
+			"key":"options",
+			"tooltip":"Use option 'other' to allow any value",
+			"keys":{
+				"key":"value",
+				"value":"label"
+			},
+			"labels":{
+				"key":"Value",
+				"value":"Label"
+			}
+		}
+	}
+}

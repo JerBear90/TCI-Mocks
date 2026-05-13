@@ -1,0 +1,236 @@
+{
+	"args":{
+		"name":"form-builder",
+		"action":"build_form",
+		"css_id":"form-builder"
+	},
+	"settings":{
+		"type":"fieldset",
+		"class":"tab",
+		"id":"tab-args",
+		"label":"Settings",
+		"form_id":{
+			"type":"info",
+			"label":"ID",
+			"key":"args[id]",
+			"class":"left clear"
+		},
+		"form_title":{
+			"type":"text",
+			"label":"Title",
+			"key":"args[title]"
+		},
+		"form_action":{
+			"type":"select",
+			"label":"Action",
+			"key":"args[action]",
+			"one_click":"true",
+			"tooltip":"Value for form 'action' input (used for ajax)",
+			"options":{
+				"contact":"Contact",
+				"edit_user":"Create/Edit User (not yet working)",
+				"edit_post":"Create/Edit Post",
+				"other":"Other"
+			},
+			"data":{
+				"action":"update-fb-submissions-tab",
+				"conirm":"Warning: Changing action will remove any settings on the Submission tab related to this action!",
+				"loader":"a[href=#tab-submission],#tab-submission fieldset[name=action]",
+				"value-type":"nospaces"
+			},
+			"conditions":{
+				"change":[
+					"edit_post:.form_callback input:wsf_get_post_value",
+					"edit_user:.form_callback input:wsf_get_user_value"
+				]
+			}
+		},
+		"header":{
+			"type":"header",
+			"html":"Style",
+			"desc":"HTML style options"
+		},
+		"form_css_id":{
+			"type":"text",
+			"label":"HTML/CSS id",
+			"key":"args[css_id]",
+			"tooltip":"Html id attribute used for form (for css styling)",
+			"data":{
+				"value-type":"nospaces"
+			}
+		},
+		"form_class":{
+			"label":"html/css Class",
+			"type":"text",
+			"key":"args[class]",
+			"tooltip":"Html class attribute form form (for css styling)"
+		},
+		"form_bd_class":{
+			"type":"text",
+			"label":"BD Class",
+			"key":"args[bd_class]",
+			"tooltip":"Html class attribute for form input wrapper element (for css styling)"
+		},
+		"form_timeout":{
+			"type":"text",
+			"label":"Timeout (milliseconds)",
+			"key":"args[timeout]",
+			"tooltip":"Timeout before reloading a page (if form response indicates a reload)",
+			"data":{
+				"value-type":"numeric"
+			}
+		},
+		"form_hide_colon":{
+			"type":"checkbox",
+			"label":"Hide Colons",
+			"key":"args[hide_colon]",
+			"tolltip":"Shows a colon (:) after field labels"
+		},
+		"form_hide_star":{
+			"type":"checkbox",
+			"label":"Hide Stars",
+			"key":"args[hide_star]",
+			"tooltip":"Shows an asterisk (*) after label for required fields"
+		},
+		
+		"header1":{
+			"type":"header",
+			"html":"Advanced",
+			"desc":"Advanced options do not need to be set - if having problems with a value, leave it blank"	
+		},
+		
+		"form_url":{
+			"type":"text",
+			"label":"Submission URL",
+			"key":"args[url]",
+			"tooltip":"URL to submit form to",
+			"data":{
+				"value-type":"nospaces"
+			}
+		},
+		"form_ajax":{
+			"label":"Use Ajax (default: yes)",
+			"type":"radios",
+			"options":{
+				"1":"Yes",
+				"0":"No"
+			},
+			"key":"args[ajax]"
+		},
+		
+		"form_target":{
+			"type":"text",
+			"label":"Target",
+			"key":"args[target]",
+			"tooltip":"HTML target attribute (used with non-ajax forms, ie. target=_blank to open in new window"
+		},
+		"form_method":{
+			"type":"radios",
+			"label":"Submit Method (default: post)",
+			"key":"args[method]",
+			"options":{
+				"post":"POST",
+				"get":"GET"
+			}
+		},
+		"form_callback":{
+			"type":"text",
+			"label":"Callback function",
+			"key":"args[callback]",
+			"tooltip":"Function to fill in values of the form (default 'get_request_value' fills in from previous submitted values)",
+			"class":"form_callback",
+			"data":{
+				"value-type":"nospaces"
+			}
+		},
+		"form_one_click":{
+			"type":"checkbox",
+			"label":"One Click Fields",
+			"key":"args[one_click]"
+		},
+		"form_template_path":{
+			"type":"text",
+			"label":"Template Path",
+			"key":"args[template_path]",
+			"tooltip":"Provide a custom path for templates used to create form elements"
+		},
+		"form_enctype":{
+			"type":"text",
+			"label":"Encoding Type",
+			"key":"args[enctype]",
+			"tooltip":"Set form encoding type (using 'enable uploads' sets encoding automatically & overrules this option)",
+			"data":{
+				"value-type":"nospaces"
+			}
+		},
+		"form_nonce_field":{
+			"type":"text",
+			"label":"Nonce Field",
+			"key":"args[nonce_field]",
+			"tooltip":"Set a custom key for the wordpress nonce",
+			"data":{
+				"value-type":"nospaces"
+			}
+		},
+		"form_nonce_key":{
+			"type":"text",
+			"label":"Nonce Key",
+			"key":"args[nonce_key]",
+			"tooltip":"Value used to generate form nonce",
+			"data":{
+				"value-type":"nospaces"
+			}
+		},
+		"header3":{
+			"type":"header",
+			"html":"Data",
+			"advanced":"true",
+			"desc":"Use this area to add arbitrary data-* attributes to the html form element"
+		},
+		"form_data":{
+			"type":"key-value",
+			"label":"Data",
+			"key":"args[data]",
+			"advanced":"true",
+			"value_label":"Value"
+		}
+	},
+	"submission":{
+		"type":"fieldset",
+		"class":"tab",
+		"id":"tab-submission",
+		"label":"Submission",
+		"messages_fieldset":{
+			"type":"fieldset",
+			"header12":{
+				"type":"header",
+				"html":"Messages"
+			},
+			"form_success":{
+				"label":"Success Message",
+				"type":"textarea",
+				"field_class":"form_success",
+				"key":"args[messages][success]"
+			},
+			"form_error":{
+				"label":"Error Message",
+				"type":"textarea",
+				"field_class":"form_error",
+				"key":"args[messages][error]"
+			},
+			"form_invalid":{
+				"label":"Invalid Message",
+				"type":"textarea",
+				"field_class":"form_invalid",
+				"key":"args[messages][invalid]"
+			}
+		}
+	},
+	"fields":{
+		"class":"form_fields tab sel",
+		"id":"tab-fields",
+		"type":"fieldlist",
+		"label":"Fields",
+		"nowrap":"true"
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"type":"fieldset",
+	"name":"term-list",
+	"title":"Term List",
+	"fields":{
+		"taxonomy_field":{
+			"label":"Taxonomy",
+			"type":"category",
+			"std":"category",
+			"key":"taxonomy"
+		}
+	}
+}

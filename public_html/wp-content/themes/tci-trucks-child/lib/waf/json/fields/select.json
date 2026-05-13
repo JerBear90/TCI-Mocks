@@ -1,0 +1,29 @@
+
+{
+	"type":"fieldset",
+	"name":"select",
+	"bdClass":"row",
+	"fields":{
+		"placeholder_field":{
+			"class":"col-md-6",
+			"type":"text",
+			"label":"Placeholder",
+			"key":"placeholder"
+		},
+		"options_field":{
+			"class":"col-md-12",
+			"label":"Options",
+			"type":"key-value",
+			"key":"options",
+			"tooltip":"Use option 'other' to allow any value",
+			"keys":{
+				"key":"value",
+				"value":"label"
+			},
+			"labels":{
+				"key":"Value",
+				"value":"Label"
+			}
+		}
+	}
+}

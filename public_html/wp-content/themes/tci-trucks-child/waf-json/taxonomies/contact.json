@@ -1,0 +1,8 @@
+{
+    "phone": {
+        "label": "Contact Phone"
+    },
+    "email": {
+        "label": "Contact Email"
+    }
+}

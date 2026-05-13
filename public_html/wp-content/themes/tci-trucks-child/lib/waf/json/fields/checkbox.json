@@ -1,0 +1,17 @@
+{
+	"type":"fieldset",
+	"name":"checkbox",
+	"title":"Checkbox Input",
+	"fields":{
+		"side_field":{
+			"label":"Label Side",
+			"type":"select",
+			"options":{
+				"right":"Right",
+				"left":"Left"
+			},
+			"std":"right",
+			"key":"side"
+		}
+	}
+}

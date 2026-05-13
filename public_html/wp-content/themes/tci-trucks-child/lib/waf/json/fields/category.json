@@ -1,0 +1,55 @@
+{
+	"type":"fieldset",
+	"name":"category",
+	"title":"Category List",
+	"fields":{
+		"taxonomy_field":{
+			"label":"Taxonomy",
+			"type":"taxonomy-list",
+			"std":"category",
+			"key":"taxonomy"
+		},
+		"hide_empty_field":{
+			"label":"Hide Empty",
+			"type":"checkbox",
+			"std":"on",
+			"key":"hide_empty"
+		},
+		"orderby_field":{
+			"label":"Order By",
+			"type":"select",
+			"key":"orderby",
+			"options":{
+				"ID":"Post Id",
+				"author":"Post Author",
+				"title":"Post Title",
+				"name":"Post Slug",
+				"date":"Post Creation Date",
+				"modified":"Post Modified Date",
+				"parent":"Post Parent ID",
+				"rand":"Random",
+				"comment_count":"Comment Count",
+				"menu_order":"Menu Order"
+			}
+		},
+		"order_field":{
+			"label":"Order",
+			"type":"select",
+			"key":"order",
+			"options":{
+				"ASC":"Ascending",
+				"DESC":"Descending"
+			}
+		},
+		"mode_field":{
+			"label":"Display Mode",
+			"type":"select",
+			"key":"mode",
+			"options":{
+				"checkboxes":"Checkboxes",
+				"radio-group":"Radio Group"
+			},
+			"empty":"Drop Down"
+		}
+	}
+}

@@ -1,0 +1,299 @@
+/*
+ Theme Name:   TCI Trucks Child
+ Theme URI:    https://cardealer.potenzaglobalsolutions.com/
+ Description:  Car Dealer - Child Theme.
+ Author:       TeamWP @Potenza Global Solutions
+ Author URI:   http://www.potenzaglobalsolutions.com
+ Template:     cardealer
+ Version:      1.0.1
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         one-column, two-columns, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, post-formats, rtl-language-support, threaded-comments, translation-ready, e-commerce, blog, grid-layout
+ Text Domain:  tci-trucks-child
+*/
+
+/* ==========================================================================
+   X/Twitter Icon Override
+   ========================================================================== */
+
+.fa-twitter:before {
+    content: '' !important;
+    background: url('x-twitter.svg');
+    display: block;
+    width: 10.5px;
+    height: 10px;
+    top: 1px;
+    position: relative;
+}
+
+.cd-social-footer .fa-twitter:before {
+    width: 22px;
+    height: 22px;
+}
+@media screen and (min-width:991px) {
+    .cd-social-footer .fa-twitter:before {
+        position: relative;
+        top: 20px;
+    }
+}
+
+/* ==========================================================================
+   Layout Fix
+   ========================================================================== */
+
+#page {
+    top: -26px !important;
+}
+
+/* ==========================================================================
+   CLS Fix: Reserve space for VC single images with known aspect ratios
+   Prevents layout shift when images load
+   ========================================================================== */
+
+.vc_single_image-wrapper {
+    overflow: hidden;
+}
+
+.wpb_single_image .vc_single_image-wrapper img {
+    height: auto;
+    max-width: 100%;
+}
+
+/* Force aspect-ratio from width/height attributes.
+   Note: attr() in aspect-ratio is NOT supported in browsers (spec only).
+   Instead, browsers natively compute aspect-ratio from width/height HTML
+   attributes when height: auto is set — no explicit CSS aspect-ratio needed.
+   The key is ensuring height: auto + width constraint are both present. */
+.wpb_single_image img[width][height] {
+    height: auto;
+    max-width: 100%;
+}
+
+/* Recognition/Awards page: images displayed in narrow columns (165px).
+   The images have width/height attrs (400x400, 426x426, 241x240, 500x295)
+   so the browser will compute aspect-ratio automatically from those attrs
+   as long as height: auto is set. Ensure the container doesn't collapse. */
+.wpb_single_image .vc_single_image-wrapper {
+    display: block;
+    line-height: 0;
+}
+.wpb_single_image picture.vc_single_image-img {
+    display: block;
+    line-height: 0;
+}
+.wpb_single_image picture.vc_single_image-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Explicit fallback: leadership portrait images are 3:4 ratio */
+.wpb_single_image img[width="1920"][height="2560"],
+.wpb_single_image img[width="1536"][height="2048"] {
+    aspect-ratio: 3 / 4;
+}
+
+/* 800x1000 portraits (Cara Swank) = 4:5 ratio */
+.wpb_single_image img[width="800"][height="1000"] {
+    aspect-ratio: 4 / 5;
+}
+
+.wpb_single_image .vc_figure {
+    display: block;
+    min-height: 0;
+    line-height: 0;
+}
+
+/* CLS Fix: VC column containers should not shift when content loads below */
+.wpb-content-wrapper .vc_row .wpb_column {
+    min-height: 1px;
+}
+
+/* CLS Fix: Ensure VC rows with images don't cause shifts.
+   Note: contain: layout style was previously used here but it actually
+   worsens CLS by preventing the browser from reserving space for content
+   that hasn't loaded yet. Removed in favor of proper image sizing. */
+.wpb-content-wrapper .vc_row {
+    contain: style;
+}
+
+/* ==========================================================================
+   CLS Fix: Leadership page — constrain image display size
+   The images have sizes="(max-width: 1920px) 100vw, 1920px" in the HTML
+   but are displayed in a column that's only ~360px wide. This CSS ensures
+   the browser reserves the correct space before the image loads.
+   ========================================================================== */
+
+/* Leadership portrait columns: left column is ~30% of row (vc_col-sm-4) */
+.vc_row .vc_col-sm-4 .wpb_single_image img,
+.vc_row .vc_col-sm-4 .vc_single_image-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+/* Ensure the image wrapper itself doesn't collapse */
+.vc_row .vc_col-sm-4 .vc_single_image-wrapper {
+    display: block;
+    line-height: 0;
+}
+
+/* ==========================================================================
+   CLS Fix: Prevent menu from causing layout shift on load
+   The mega menu starts hidden then appears, pushing content down.
+   ========================================================================== */
+
+#header .mega-menu #mega-menu-wrap-primary-menu #mega-menu-primary-menu {
+    min-height: 45px;
+}
+
+/* ==========================================================================
+   Accessibility: Color Contrast Fix
+   Nav active/hover state needs 4.5:1 ratio on white background
+   #c41019 passes WCAG AA at 4.56:1 on white (vs #ed1c24 at 4.38:1)
+   ========================================================================== */
+
+#header.light .mega-menu #mega-menu-wrap-primary-menu #mega-menu-primary-menu > .mega-menu-item.mega-current-menu-item > .mega-menu-link,
+#header.light .mega-menu #mega-menu-wrap-primary-menu #mega-menu-primary-menu > .mega-menu-item.mega-current-menu-ancestor > .mega-menu-link,
+#header.light .mega-menu #mega-menu-wrap-primary-menu #mega-menu-primary-menu > .mega-menu-item.mega-current_page_ancestor > .mega-menu-link,
+#header.light .mega-menu #mega-menu-wrap-primary-menu #mega-menu-primary-menu > .mega-menu-item > .mega-menu-link:hover,
+#header.light .mega-menu #mega-menu-wrap-primary-menu #mega-menu-primary-menu > .mega-menu-item > .mega-menu-link:focus {
+    color: #c41019 !important;
+}
+
+/* Fallback nav links (non-mega-menu ul#primary-menu) — active/current page ancestor */
+#header.light ul#primary-menu > li.current-menu-item > a,
+#header.light ul#primary-menu > li.current-menu-ancestor > a,
+#header.light ul#primary-menu > li.current_page_ancestor > a,
+#header.light ul.menu-links > li.current-menu-item > a,
+#header.light ul.menu-links > li.current-menu-ancestor > a,
+#header.light ul.menu-links > li.current_page_ancestor > a,
+#header ul#primary-menu > li > a:hover,
+#header ul#primary-menu > li > a:focus,
+#header ul.menu-links > li > a:hover,
+#header ul.menu-links > li > a:focus {
+    color: #c41019 !important;
+}
+
+/* CTA button contrast fix */
+#header .mega-menu #mega-menu-wrap-primary-menu #mega-menu-primary-menu > li.mega-menu-item > a.mega-menu-link[href^="tel"],
+#header.light .mega-menu #mega-menu-wrap-primary-menu #mega-menu-primary-menu > li.mega-menu-item > a.mega-menu-link[href^="tel"],
+#header ul#primary-menu > li > a[href^="tel"],
+#header ul.menu-links > li > a[href^="tel"] {
+    background-color: #c41019 !important;
+    color: #fff !important;
+}
+
+/* ==========================================================================
+   Accessibility: Color Contrast Fix — Quote Section
+   White text on #ed1c24 background = 4.38:1 (fails AA for normal text).
+   Darken the background to #c41019 which gives 4.56:1 (passes AA).
+   ========================================================================== */
+
+.vc_custom_1633130380723 {
+    background-color: #c41019 !important;
+}
+
+/* ==========================================================================
+   Accessibility: Touch Target Sizes
+   Social icons in topbar need minimum 24x24px tap area (WCAG 2.2 AA)
+   ========================================================================== */
+
+.topbar_item.topbar_item_type-social_profiles a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    min-height: 24px;
+    padding: 4px;
+}
+
+/* ==========================================================================
+   Font Display: Note
+   Font Awesome 6 (all.min.css) already declares font-display: swap.
+   The Lighthouse "font-display" warning is a timing issue from render-blocking
+   CSS, not a missing declaration. WP Rocket's minify_css helps here.
+   ========================================================================== */
+
+/* ==========================================================================
+   CLS Fix: Font metric overrides for Montserrat
+   Reduces layout shift when web font loads by matching fallback metrics.
+   Also forces font-display: swap on Montserrat to prevent invisible text.
+   ========================================================================== */
+
+@font-face {
+    font-family: 'Montserrat-fallback';
+    src: local('Arial');
+    ascent-override: 84.5%;
+    descent-override: 22%;
+    line-gap-override: 0%;
+    size-adjust: 113%;
+}
+
+/* Ensure Montserrat uses swap display — prevents FOIT (flash of invisible text) */
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    src: local('Montserrat');
+}
+
+/* Apply the fallback font stack so text is visible immediately */
+body,
+.wpb_text_column,
+.vc_row,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', 'Montserrat-fallback', Arial, sans-serif;
+}
+
+/* ==========================================================================
+   Accessibility: Color Contrast Fix — Award description spans
+   h3.h3-awards > span elements use inline color #ed1c24 (4.38:1 on white).
+   Override to #c41019 (4.56:1) to pass WCAG AA.
+   ========================================================================== */
+
+h3.h3-awards span {
+    color: #c41019 !important;
+}
+
+/* ==========================================================================
+   CLS Fix: Recognition/Awards page — prevent content shift from image load
+   The main layout shift (0.29 score) is caused by the first award image
+   (top-green-fleet.png.webp, 400x400) loading and pushing content down.
+   The image is inside a vc_col-sm-12 column with text above it.
+   
+   Root cause: The <picture> element with <source> + <img> doesn't reserve
+   space until the image dimensions are known. Even though width/height attrs
+   exist on the <img>, the parent containers collapse to 0 height initially.
+   
+   Fix: Ensure the image column reserves space by making the image wrapper
+   a block-level element that respects the img's intrinsic aspect ratio.
+   ========================================================================== */
+
+/* Ensure picture elements inside VC single images don't collapse */
+.wpb_single_image picture {
+    display: block;
+}
+
+/* The vc_single_image-wrapper inside picture needs to be block too */
+.wpb_single_image picture .vc_single_image-wrapper,
+.wpb_single_image .vc_single_image-wrapper picture {
+    display: block;
+}
+
+/* All images inside VC single image wrappers: block display + height auto
+   ensures the browser uses width/height attrs to compute aspect ratio */
+.wpb_single_image .vc_single_image-wrapper img,
+.wpb_single_image picture img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   CLS Fix: Topbar shift prevention
+   The topbar container shifts when fonts load (Montserrat replaces fallback).
+   Set a min-height on the topbar to prevent this shift.
+   ========================================================================== */
+
+.topbar .container {
+    min-height: 28px;
+}

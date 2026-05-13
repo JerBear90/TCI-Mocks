@@ -1,0 +1,21 @@
+<?php
+include 'debug.php';
+include 'getDirContents.php';
+include 'getForm.php';
+include 'currentUrl.php';
+include 'pageByName.php';
+include 'getRequestValue.php';
+include 'getDataAttr.php';
+include 'waf_success.php';
+include 'waf_error.php';
+include 'waf_get_template_html.php';
+include 'get_formdata.php';
+include 'waf_path_to_name.php';
+include 'waf_name_to_path.php';
+include 'save_file.php';
+include 'waf_event_message.php';
+include 'waf_download_file.php';
+include 'waf_remap_files.php';
+include 'waf_date_diff.php';
+include 'get_form_metalist.php';
+include 'isAssoc.php';

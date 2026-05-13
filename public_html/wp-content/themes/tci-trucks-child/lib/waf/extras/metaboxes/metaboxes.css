@@ -1,0 +1,17 @@
+.metaboxes-metabox .form-p {
+	margin-bottom: 10px;
+}
+.metaboxes-metabox label {
+	display: block;
+}
+.metaboxes-metabox .form-p.checkbox label,
+.metaboxes-metabox .form-p.checkbox input {
+	display: inline-block;
+}
+.metaboxes-metabox select,
+.metaboxes-metabox input[type=text],
+.metaboxes-metabox input[type=email],
+.metaboxes-metabox input[type=password] {
+	border-radius: 2px;
+	width: 90%;
+}	

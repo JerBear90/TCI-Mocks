@@ -1,0 +1,19 @@
+{
+	"type":"fieldset",
+	"name":"term-list",
+	"title":"Term List",
+	"fields":{
+		"none_field":{
+			"label":"None Field Label",
+			"type":"text",
+			"key":"none",
+			"std":"None"
+		},
+		"full_field":{
+			"label":"Full Size Label",
+			"type":"text",
+			"key":"full",
+			"std":"Full"
+		}
+	}
+}

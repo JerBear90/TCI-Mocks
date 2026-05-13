@@ -1,0 +1,40 @@
+{
+    "args": {
+        "form": "login",
+        "action": "",
+        "keyboardNav": false,
+        "showColon": false,
+        "url": "/wp-json/waf/v1/loginUser",
+        "class": "",
+        "bdClass": "d-flex flex-column justify-content-center align-items-stretch",
+        "method": "post",
+        "format": "json",
+        "edit": false,
+        "data": {
+            "handler": "simple"
+        },
+        "loading": {
+            "color": "danger",
+            "grow": false
+        }
+    },
+    "user_login": {
+        "type": "text",
+        "label": "Username or E-mail",
+        "required": true
+    },
+    "user_password": {
+        "type": "password",
+        "label": "Password",
+        "required": true
+    },
+    "rememberme": {
+        "type": "checkbox",
+        "label": "Keep me signed in"
+    },
+    "submit": {
+        "type": "submit",
+        "inputClass": "btn btn-success btn-lg",
+        "value": "Login"
+    }
+}

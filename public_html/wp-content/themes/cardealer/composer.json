@@ -1,0 +1,24 @@
+{
+    "name": "potenza/cardealer-theme",
+    "description": "CarDealer WordPress Theme - Development Dependencies",
+    "type": "wordpress-theme",
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "10up/wp_mock": "^1.0"
+    },
+    "autoload-dev": {
+        "psr-4": {}
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "platform": {
+            "ext-openssl": "1.0",
+            "ext-curl": "1.0"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}

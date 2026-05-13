@@ -1,0 +1,10 @@
+{
+    "type":"fieldset",
+    "fields":{
+        "placeholder_field":{
+            "type":"text",
+            "label":"Placeholder",
+            "key":"placeholder"
+        }
+    }
+}

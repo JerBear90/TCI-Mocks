@@ -1,0 +1,15 @@
+<?php
+/**
+ * About Bg Section
+ *
+ * @package Cardealer
+ */
+
+return array(
+	'name'              => esc_html__( 'About Section 3', 'cardealer' ),
+	'template_category' => esc_html__( 'About Info', 'cardealer' ),
+	'disabled'          => true, // Disable it to not show in the default tab.
+	'content'           => '<<<CONTENT
+<p>[vc_row content_placement="middle" cd_enable_responsive_settings="true" css=".vc_custom_1698996598501{padding-top: 110px !important;padding-bottom: 100px !important;}" element_css_md=".vc_custom_1698996598502{padding-top: 90px !important;padding-bottom: 90px !important;}" element_css_sm=".vc_custom_1698996598502{padding-top: 80px !important;padding-bottom: 80px !important;}" element_css_xs=".vc_custom_1698996598502{padding-top: 70px !important;padding-bottom: 70px !important;}"][vc_column cd_enable_responsive_settings="true" el_id="1698826023003-9e077b47-81f5" offset="vc_col-lg-6 vc_col-md-6" css=".vc_custom_1698999346943{padding-right: 20px !important;}" element_css_sm=".vc_custom_1698999346945{padding-right: 15px !important;}" element_css_md=".vc_custom_1698999346944{padding-right: 15px !important;}"][vc_single_image source="external_link" custom_src="https://sampledata.potenzaglobalsolutions.com/cardealer-modern-vc/wp-content/uploads/2023/12/banner-2.jpg" img_size="full"][/vc_column][vc_column cd_enable_responsive_settings="true" el_id="1698826023009-0e098b35-b75e" offset="vc_col-lg-6 vc_col-md-6" css=".vc_custom_1698999354771{padding-right: 50px !important;padding-left: 20px !important;}" element_css_sm=".vc_custom_1698999354773{margin-top: 30px !important;padding-left: 15px !important;}" element_css_md=".vc_custom_1698999354772{padding-left: 30px !important;}"][cd_section_title heading_tag="h2" title_align="text-left" show_content="true" section_title="Best Solution Provides Electric Vehicle" section_sub_title="About Electric Vehicle" style="style_3" title_font_size_lg="" title_font_size_md="44" title_font_size_sm="38" title_font_size_xs="32" title_line_height_lg="" title_line_height_md="52" title_line_height_sm="46" title_line_height_xs="40"]Car Dealer is the best premium HTML5 Template. We provide everything you need to build an Amazing dealership website developed especially for car sellers, dealers or auto motor retailers.[/cd_section_title][cd_infobox title_tag="h5" icon_type="flaticon" icon_flaticon="glyph-icon flaticon-travel" style="style-2" title="Charging Station" description="Suitable for any car dealer websites, business or corporate websites." css=".vc_custom_1698904285932{margin-top: 40px !important;padding-right: 50px !important;}"][cd_infobox title_tag="h5" icon_type="flaticon" icon_flaticon="glyph-icon flaticon-car-repair" style="style-2" title="Auto Return Service" description="Suitable for any car dealer websites, business or corporate websites." css=".vc_custom_1698904291602{margin-top: 30px !important;padding-right: 50px !important;}"][cd_button size="extra-large" title="Our Services" style="default" url="url:%23" css=".vc_custom_1698904303330{margin-top: 40px !important;}"][/vc_column][/vc_row]</p>
+CONTENT',
+);

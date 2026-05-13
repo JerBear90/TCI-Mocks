@@ -1,0 +1,879 @@
+
+/*=============================================*/
+/* Min 768 View */
+/*=============================================*/
+@media only screen and (min-width:768px) {
+  
+  /*-----------------------------*/
+  /* Hotspot */
+  /*-----------------------------*/
+  .cdhl-image-hotspot-wrapper .hide-desktop {
+    display: none;
+  }
+}
+
+/*=========================================================*/
+/* Max 1272 - View */
+/*=========================================================*/
+@media (max-width: 1272px) {
+
+	/*========================================*/
+	/* Counter - Shortcode */
+	/*========================================*/
+	.counter.counter-style-1.counter-light ul li {
+		padding: 20px 30px;
+	}
+
+}
+
+/*=========================================================*/
+/* Max 1200 - View */
+/*=========================================================*/
+@media (max-width:1200px) {
+
+    /*========================================*/
+    /* Blog - Shortcode */
+    /*========================================*/
+    .blog-2 .blog-admin-main{
+        padding-left: 0;
+    }
+    .blog-2 .blog-admin-main .blog-admin{
+        padding-left: 20px;
+    }
+    .blog-2 .blog-admin-main .blog-meta > ul{
+        padding-left: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    .blog-2 .blog-admin-main .blog-meta > ul li:first-child {
+        border-left: none;
+    }
+
+    /*-------------------------------*/
+	/* Vehicle Listing Filters */
+	/*-------------------------------*/
+	.cdhl_vehicles-listing-filters_wrapper.horizontal .sort-filters > .year-range-slider-wrapper {width: 49.4% !important;}
+	.cdhl_vehicles-listing-filters_wrapper.horizontal .listing_sort .select2-container {width: 24% !important;}
+	body .cdhl_vehicles-listing-filters_wrapper.horizontal .listing_sort .sort-filters .reset_filters-container {width: 24% !important;}
+
+    /*========================================*/
+    /* Dealer List - Shortcode */
+    /*========================================*/
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-tools .cdfs-dealers-search-tools-first {width: 66.6666%;}
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-tools .cdfs-dealers-search-tools-second {width: 33.3333%;}
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-tools .cdfs-dealers-search-tools-third {width: 50%;}
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-tools .cdfs-dealers-search-tools-first + .cdfs-dealers-search-tools-second {margin-bottom: 20px;}
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-tools .cdfs-dealers-search-tools-first.is-empty {display: none;}
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-tools .cdfs-dealers-search-tools-first.is-empty + .cdfs-dealers-search-tools-second {margin-bottom: 0px;}
+
+    /*===============================================*/
+    /* Hero Vehicle Banner - Shortcode */
+    /*===============================================*/
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-content {padding-right: 15%;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-nav {right: 60px;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-nav .slick-arrow {width: 40px; height: 80px;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-nav .slick-arrow:before {font-size: 20px;}
+
+    /*===============================================*/
+    /* Vehicle by Type - Shortcode */
+    /*===============================================*/
+    .search-logo.style_2 .cardealer-tabcontent .col-md-3 {width: 20%;}
+}
+
+/*=========================================================*/
+/* Max 1025 - View */
+/*=========================================================*/
+@media (max-width:1025px) {
+
+	.section-title {
+        margin-bottom: 40px;
+    }
+
+}
+
+/*=========================================================*/
+/* Max 992 - View */
+/*=========================================================*/
+@media (max-width:992px) {
+
+	/*========================================*/
+	/* Counter - Shortcode */
+	/*========================================*/
+	.counter .counter-block {
+		margin-bottom: 30px;
+	}
+	.counter.counter-style-1.counter-light ul {
+		display: inline-block;
+		width: 100%;
+		background: #ffffff;
+	}
+
+	/*========================================*/
+	/* Potenza Custom Menu - Shortcode */
+	/*========================================*/
+	.potenza-custom-menu.horizontal {
+		display: none;
+	}
+
+    /*========================================*/
+    /* Timeline - Shortcode */
+    /*========================================*/
+    .timeline:before {
+        left: 25px;
+    }
+    .timeline > li > .timeline-badge {
+        left: 25px;
+    }
+    .timeline > li > .timeline-panel {
+        width: 100%;
+    }
+    .timeline > li.timeline-inverted > .timeline-panel:before {
+        left: -15px;
+    }
+    .timeline > li > .timeline-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+    .timeline > li > .timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
+    .timeline > li:not(.timeline-inverted) {
+        padding-right: 0px;
+        padding-left: 90px;
+    }
+
+    /*========================================*/
+    /* Newsletter - Shortcode */
+    /*========================================*/
+    .news-letter-main {
+        display: block;
+    }
+
+    /*========================================*/
+    /* Quick Link - Shortcode */
+    /*========================================*/
+    .q-link h6 {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    /*========================================*/
+    /* Blog - Shortcode */
+    /*========================================*/
+    .blog-1 img {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .blog-1 .blog-content {
+        padding-left: 0px;
+    }
+    .blog-2 {
+        margin-bottom: 30px;
+    }
+    .masonry-item .blog-2 {
+        margin-bottom: 0px;
+    }
+
+    /* Blog Post 1 - Shortcode */
+    .cdhl-blog-post-1 .blog-post-image .entry-date {width: 90px; height: 80px;}
+    .cdhl-blog-post-1 .blog-post-image .entry-date .day {font-size: 30px;}
+    .cdhl-blog-post-1 .blog-post-image .entry-date .month {font-size: 16px;}
+    .cdhl-blog-post-1 .blog-post-content .post-title {font-size: 23px; line-height: 33px;}
+
+    /*========================================*/
+    /* Team - Shortcode */
+    /*========================================*/
+    .team-2 .team-info {
+        min-height: 200px;
+    }
+
+    /*========================================*/
+    /* Testimonial - Shortcode */
+    /*========================================*/
+    .testimonial-2 .testimonial-center {
+        width: 100%;
+    }
+    .testimonial-5 .testimonial-content {
+        padding: 0;
+    }
+
+    /*========================================*/
+    /* Potenza Vehicles Search - Shortcode */
+    /*========================================*/
+    .slider-content.vehicle-search-section .search-tab .cardealer-tabcontent {
+        padding-top: 60px;
+    }
+
+    /*========================================*/
+    /* Potenza Vehicles by Type - Shortcode */
+    /*========================================*/
+    .search-logo.style_2 .cardealer-tabcontent .col-md-3 {
+        width: 33.3333%;
+    }
+
+    /*========================================*/
+    /* Potenza Tab Vertical Multi Tab - Shortcode */
+    /*========================================*/
+    .tab-vertical.tabs-left .left-tabs-block {
+        width: 27%;
+    }
+    .tab-vertical.tabs-left .tab-content {
+        width: 70%;
+    }
+    .tab-vertical.tabs-left .tab-content .tab-pane .grid-item {
+        width: 48%;
+    }
+
+    /*-------------------------------*/
+	/* Vehicle Listing Filters */
+	/*-------------------------------*/
+	.cdhl_vehicles-listing-filters_wrapper.horizontal .sort-filters > .year-range-slider-wrapper {width: 100% !important;}
+	.cdhl_vehicles-listing-filters_wrapper.horizontal .listing_sort .select2-container {width: 32% !important;}
+	body .cdhl_vehicles-listing-filters_wrapper.horizontal .listing_sort .sort-filters .reset_filters-container {width: 32% !important;}
+
+    /*===============================================*/
+    /* Hero Vehicle Banner - Shortcode */
+    /*===============================================*/
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-content {height: 400px !important; padding: 25px 0; padding-right: 0px !important;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-title {font-size: var(--font-size-tablet); line-height: var(--line-height-tablet); letter-spacing: var(--letter-spacing-tablet); word-spacing: var(--word-spacing-tablet);}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-description {padding-right: 0;}
+
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta {display: block;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta-specs {padding: 25px 0;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta-specs .hero-vehicle-info-carousel-item-meta-spec-title {font-size: 20px;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta-specs .hero-vehicle-info-carousel-item-meta-spec-subtitle {font-size: 15px;}
+
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta-data {width: 100%; min-height: inherit; padding: 30px;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta-data .hero-vehicle-info-carousel-item-meta-data-price .price {flex-direction: inherit; gap: 10px;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta-data .hero-vehicle-info-carousel-item-meta-data-title {font-size: 22px; line-height: 28px;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta-data .hero-vehicle-info-carousel-item-meta-data-price .new-price {font-size: 22px;}
+
+    /* Slider Arrow */
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-nav {display: flex; flex-direction: inherit; right: 30px; top: auto; bottom: 350px; gap: 5px;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-nav .slick-arrow {width: 40px; height: 40px;}
+}
+
+/*=========================================================*/
+/* Max 767 - View */
+/*=========================================================*/
+@media (max-width: 767px) {
+
+    /*========================================*/
+    /* Section Title - Shortcode */
+    /*========================================*/
+    .section-title.text-center .separator + p {
+        padding: 0 15px;
+    }
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    /*========================================*/
+    /* Quick Link - Shortcode */
+    /*========================================*/
+    .q-link i {
+        font-size: 16px;
+        height: 50px;
+        line-height: 50px;
+        width: 50px;
+        margin-bottom: 0px;
+    }
+    .q-link h6 {
+        display: none;
+    }
+
+    /*========================================*/
+    /* Blog - Shortcode */
+    /*========================================*/
+    .masonry-item .blog-2 {margin-bottom: 50px;}
+    .blog-2 .blog-admin-main .blog-meta.pull-right {display: initial; float: right !important; border-top: 0px solid #e3e3e3;}
+    .blog-2 .cardealer-share-has-inline-links .cardealer-share-inline-links .single-share-box {display: none;}
+
+    /*=========================================*/
+    /* Blog Post 1 - Shortcode */
+    /*=========================================*/
+    .cdhl-blog-post-1 .blog-post-image .entry-date {width: 80px; height: 70px;}
+    .cdhl-blog-post-1 .blog-post-image .entry-date .day {font-size: 28px;}
+    .cdhl-blog-post-1 .blog-post-image .entry-date .month {font-size: 16px;}
+    .cdhl-blog-post-1 .blog-post-content .post-title {font-size: 20px; line-height: 30px;}
+    .cdhl_blog_post_1.grid .cdhl-blog-post-1 {margin-top: 30px;}
+    .cdhl_blog_post_1.grid .col-sm-6:first-child .cdhl-blog-post-1 {margin-top: 0px;}
+
+    /*=========================================*/
+    /* Blog Post 2 - Shortcode */
+    /*=========================================*/
+    .cdhl_blog_post_2_wrapper {display: block;}
+    .cdhl_blog_post_2_wrapper .cdhl-blog-post-left {width: 100%; margin-bottom: 40px;}
+    .cdhl_blog_post_2_wrapper .blog-post-content .post-title {font-size: 22px; line-height: 32px;}
+    .cdhl_blog_post_2_wrapper .cdhl-blog-post-right .post-title {font-size: 20px; line-height: 30px;}
+
+    /*========================================*/
+    /* Testimonial - Shortcode */
+    /*========================================*/
+    .testimonial-1 .testimonial-block .testimonial-image img {
+        width: 100%;
+    }
+    .testimonial-3 .testimonial-content{
+        padding-top: 50px;
+    }
+    .testimonial-3 .owl-carousel .owl-item img {
+        width: 200px;
+        margin: 0 auto;
+        margin-bottom: -35px;
+        position: relative;
+        z-index: 9;
+    }
+    .testimonial-4 .testimonial-block p {
+        padding: 0px;
+    }
+
+    /*========================================*/
+    /* Feature Box - Shortcode */
+    /*========================================*/
+    .feature-box-2.box-hover {
+        margin-bottom: 30px;
+    }
+    .inner-service .feature-box-2 {
+        border: 0px;
+        padding: 20px 30px;
+    }
+    .feature-box.right-align {
+        text-align: left;
+    }
+    .feature-box.style-10 img {
+        width: 100%;
+    }
+
+    /*===============================================*/
+    /* Potenza Vehicles Conditions Tabs - Shortcode */
+    /*===============================================*/
+    .cars_condition_carousel-wrapper .cardealer-tabs h6 {
+        display: block;
+        text-align: center;
+    }
+    .cars_condition_carousel-wrapper .cardealer-tabs .tabs {
+        float: none !important;
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    /*========================================*/
+    /* Potenza Vehicles Search - Shortcode */
+    /*========================================*/
+    .slider-content.vehicle-search-section .search-tab h6 {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .slider-content.vehicle-search-section.style-2 .search-tab h6 {
+        font-size: 24px;
+        line-height: 30px;
+        margin-right: 0;
+    }
+    .slider-content.vehicle-search-section.style-2 .search-tab h5 {
+        font-size: 24px;
+        line-height: normal;
+    }
+    .slider-content.vehicle-search-section.style-2 .search-tab ul.tabs {
+        display: block;
+        margin-top: 15px;
+        margin-left: -10px;
+    }
+    .slider-content.vehicle-search-section.style-2 .search-tab ul.tabs li {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    /*========================================*/
+    /* Potenza Custom Filters - Shortcode */
+    /*========================================*/
+    .search-block.search-logo {
+        text-align: center;
+        padding: 15px;
+    }
+    .search-block.search-logo .sort-filters-box > div {
+        width: 100%;
+        float: none;
+    }
+    .search-logo ul.tabs {
+        text-align: center;
+    }
+
+    /*========================================*/
+    /* Potenza Tab Vertical Multi Tab - Shortcode */
+    /*========================================*/
+    .tab-vertical.tabs-left .left-tabs-block {
+        width: 100%;
+        margin-right: 0;
+    }
+    .tab-vertical.tabs-left .tab-content {
+        width: 100%;
+    }
+    .tab-vertical.tabs-left .tab-content .tab-pane .grid-item {
+        width: 49%;
+    }
+    .tab-vertical.tabs-left .tab-content .tab-pane .grid-item:nth-child(3n) {
+        margin-right: 2%;
+    }
+    .tab-vertical.tabs-left .tab-content .tab-pane .grid-item:nth-child(even) {
+        margin-right: 0;
+    }
+
+    /*========================================*/
+    /* Counter - Shortcode */
+    /*========================================*/
+    .counter.counter-style-2.right,
+    .counter.counter-style-3.right {
+        flex-direction: inherit;
+    }
+    .counter.icon.right .icon {
+        padding-left: 0;
+        padding-right: 20px;
+    }
+    .counter.icon.right .content {
+        text-align: left;
+    }
+
+    .counter.counter-style-5 .timer {font-size: 50px;}
+
+    /*========================================*/
+    /* Play Video - Shortcode */
+    /*========================================*/
+    .play-video.top .video-info {
+        margin-top: 30px;
+    }
+    .play-video .video-info a {
+        width: 70px;
+        height: 70px;
+    }
+    .play-video .video-info a i {
+        width: 50px;
+        height: 50px;
+        line-height: 52px;
+    }
+    .play-video .play-video-bg {
+        padding: 100px 0 190px;
+    }
+
+    .cdhl_video-button_wrapper .video-info a {width: 80px; height: 80px;}
+
+    @keyframes squares {
+        0% {transform: scale(1); opacity: 0;}
+        20% {transform: scale(1.15); opacity: 1;}
+        to {transform: scale(1.80); opacity: 0;}
+    }
+
+    /*===============================================*/
+    /* Dealer List - Shortcode */
+    /*===============================================*/
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-filters {
+        margin-bottom: 25px;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-field label {
+        display: none;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-field {
+        margin-bottom: 15px;
+    }
+
+    .cdfs-dealers-wrapper .cdfs-dealers-list-wrapper .cdfs-dealers-list thead {
+        display: none;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-list-wrapper .cdfs-dealers-list tbody tr {
+        display: block;
+        border-bottom: 2px solid #f2f2f2;
+        padding: 15px 0;
+        margin-bottom: 15px;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-list-wrapper .cdfs-dealers-list tbody tr:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-list-wrapper .cdfs-dealers-list tbody td {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border-bottom: none;
+        padding: 0;
+        margin-bottom: 15px;
+        min-height: 30px;
+        position: relative;
+        padding-left: 180px;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-list-wrapper .cdfs-dealers-list tbody td:before {
+        content: attr(data-title);
+        position: absolute;
+        left: 0;
+        min-width: 180px;
+        text-transform: uppercase;
+        color: #323232;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-list-wrapper .cdfs-dealers-list .cdfs-dealers-list-column-location {
+        max-width: inherit;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-list-wrapper .cdfs-dealers-list .cdfs-dealers-list-column-location .search-distance {
+        width: 100%;
+    }
+
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-tools > .row {
+        display: block;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-tools .cdfs-dealers-search-tools-first {
+        display: block;
+        width: 100%;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-tools .cdfs-dealers-search-tools-first .cdfs-dealers-search-field {
+        margin-bottom: 15px;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-tools .cdfs-dealers-search-tools-second {
+        width: 100%;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-tools .cdfs-dealers-search-tools-third {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /*===============================================*/
+    /* Hotspot */
+    /*===============================================*/
+    .cdhl-image-hotspot .hotspot-content {
+        width: 200px;
+        padding: 10px;
+    }
+    .cdhl-image-hotspot-wrapper .hide-mobile {
+        display: none;
+    }
+    .cdhl-image-hotspot .dot-style-1,
+    .cdhl-image-hotspot .dot-style-2 {
+        margin: 5px;
+    }
+    .hotspot-content:after,
+    .hotspot-content:before {
+        border: none;
+    }
+    .cdhl-image-hotspot .hotspot-content.hotspot-dropdown-left {
+        right: 0;
+        top: 30px;
+        left: auto;
+    }
+    .cdhl-image-hotspot .trigger-hover:hover .hotspot-content.hotspot-dropdown-left,
+    .cdhl-image-hotspot .trigger-click.hotspot-visible .hotspot-content.hotspot-dropdown-left {
+        right: 0px;
+        top: 40px;
+        left: auto;
+    }
+    .cdhl-image-hotspot .hotspot-content.hotspot-dropdown-right {
+        right: auto;
+        top: 35px;
+        left: 0px;
+    }
+    .cdhl-image-hotspot .trigger-hover:hover .hotspot-content.hotspot-dropdown-right,
+    .cdhl-image-hotspot .trigger-click.hotspot-visible .hotspot-content.hotspot-dropdown-right {
+        right: auto;
+        top: 45px;
+        left: 0px;
+    }
+    .cdhl-image-hotspot .hotspot-content.hotspot-dropdown-down {
+        top: 35px;
+        left: 50%;
+        -ms-transform: translate(-50%, 0px);
+        -webkit-transform: translate(-50%, 0px);
+        transform: translate(-50%, 0px);
+    }
+    .cdhl-image-hotspot .trigger-hover:hover .hotspot-content.hotspot-dropdown-down,
+    .cdhl-image-hotspot .trigger-click.hotspot-visible .hotspot-content.hotspot-dropdown-down {
+        top: 45px;
+    }
+    .cdhl-image-hotspot .hotspot-content.hotspot-dropdown-up {
+        bottom: inherit;
+        top: 40px;
+        left: 50%;
+        -ms-transform: translate(-50%, 0px);
+        -webkit-transform: translate(-50%, 0px);
+        transform: translate(-50%, 0px);
+    }
+    .cdhl-image-hotspot .trigger-hover:hover .hotspot-content.hotspot-dropdown-up,
+    .cdhl-image-hotspot .trigger-click.hotspot-visible .hotspot-content.hotspot-dropdown-up {
+        bottom: inherit;
+        top: 50px;
+    }
+    .cdhl-image-hotspot .dot-style-1 {
+        height: 24px;
+        line-height: 24px;
+        width: 24px;
+        border-radius: 24px;
+    }
+    .cdhl-image-hotspot .dot-style-1 span {
+        height: 6px;
+        width: 6px;
+        margin-left: -3px;
+        margin-top: -3px;
+    }
+    .cdhl-image-hotspot .dot-style-2:before {
+        height: 24px;
+        width: 24px;
+        line-height: 24px;
+        font-size: 10px;
+    }
+
+    /*===============================================*/
+    /* Hero Vehicle Banner - Shortcode */
+    /*===============================================*/
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-content {height: auto !important; min-height: 280px; padding: 40px 0;  padding-right: 0 !important;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-title {font-size: var(--font-size-mobile); line-height: var(--line-height-mobile); letter-spacing: var(--letter-spacing-mobile); word-spacing: var(--word-spacing-mobile);}
+
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-nav {right: 15px;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-nav .slick-arrow {width: 35px; height: 35px;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-nav .slick-arrow:before {font-size: 14px;}
+
+    /*===============================================*/
+    /* Button - Shortcode */
+    /*===============================================*/
+    .button.extra-large {font-size: 16px; line-height: 24px; padding: 14px 30px;}
+
+    /*===============================================*/
+    /* App Button - Shortcode */
+    /*===============================================*/
+    .cdhl_app-buttons_wrapper .pgs_app_btn {padding: 10px 20px 10px 20px;}
+    .cdhl_app-buttons_wrapper .cdhl-app-btn-icon i {font-size: 22px;}
+    .cdhl_app-buttons_wrapper .cdhl-app-btn-content {padding-left: 15px; margin-left: 15px;}
+
+    /*========================================*/
+    /* Vehicles by Type - Shortcode */
+    /*========================================*/
+    .search-block.search-logo.style_2 {padding: 0;}
+    .search-logo h6 {display: block; margin-bottom: 15px;}
+    .search-logo.style_2 h6 {font-size: 26px; line-height: 32px; margin-right: 0; padding-right: 0;}
+    .search-logo ul.tabs {float: none;}
+    .search-logo.style_2 .cardealer-tabs .tabs li {padding: 3px 20px; font-size: 14px; margin-left: 3px; margin-right: 3px;}
+
+    .search-logo.style_1 .cardealer-tabcontent .col-md-3,
+    .search-logo.style_2 .cardealer-tabcontent .col-md-3 {width: 50%; float: left;}
+
+}
+
+/*=========================================================*/
+/* Max 600 - View */
+/*=========================================================*/
+@media (max-width: 575px) {
+    
+    /*========================================*/
+    /* Potenza Vehicles Search - Shortcode */
+    /*========================================*/
+    .slider-content.vehicle-search-section .search-tab .cardealer-tabcontent form > [class^="col-"] {
+        display: inline-block;
+        width: 100%;
+    }
+
+}
+
+/*=========================================================*/
+/* Max 479 - View */
+/*=========================================================*/
+@media (max-width: 479px) {
+
+	/*========================================*/
+    /* Search Block New */
+    /*========================================*/
+    .search-block-new .search-block {padding: 35px 20px 35px 20px;}
+    .search-block-new .search-block .sort-filters-box > div {margin-bottom: 10px;}
+    .search-block-new .search-block .selected-box {margin-top: 0;}
+
+    /*========================================*/
+    /* Counter - Shortcode */
+    /*========================================*/
+    .counter.counter-style-1.counter-light ul li {
+        float: none;
+        display: inline-block;
+        width: 100%;
+    }
+    .counter.counter-style-1.counter-light ul li:nth-child(1),
+    .counter.counter-style-1.counter-light ul li:nth-child(2) {
+        border: 0px;
+    }
+    .counter.counter-style-1.counter-light .icon {
+        display: block;
+        text-align: center;
+    }
+    .counter.counter-style-1.counter-light .info {
+        display: block;
+        text-align: center;
+    }
+
+    /*========================================*/
+    /* Quick Links - Shortcode */
+    /*========================================*/
+    .q-link {
+        flex: none;
+        width: 33.3333%;
+        min-width: 33.3333%;
+        padding: 20px 10px;
+        float: left;
+    }
+    .q-link.box-hover:hover {
+        padding-bottom: 20px;
+    }
+
+    /*========================================*/
+    /* Blog - Shortcode */
+    /*========================================*/
+    .blog-2 .blog-admin-main {
+        padding-left: 0;
+    }
+    .blog-2 .blog-admin-main .blog-meta.pull-right {
+        display: block;
+        float: none !important;
+        border-top: 1px solid #e3e3e3;
+    }
+    .blog-2 .blog-admin-main .blog-admin {
+        padding-left: 20px;
+    }
+    .blog-2 .blog-admin-main .blog-meta > ul {
+        padding-left: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    .blog-2 .blog-content .blog-meta ul li {
+        text-align: left;
+        width: 49.3333%;
+    }
+    .blog-2 .blog-admin-main .blog-meta > ul li:first-child {
+        border-left: none;
+    }
+    .blog-2 .blog-content .blog-meta ul li.share {
+        text-align: right;
+    }
+
+    /*========================================*/
+    /* Counter - Shortcode */
+    /*========================================*/
+    .counter.counter-style-5 .counter-title {font-size: 16px;}
+    .counter.counter-style-5 .timer {font-size: 40px;}
+
+    /*========================================*/
+    /* Testimonial - Shortcode */
+    /*========================================*/
+    .testimonial-2 .testimonial-content {
+        padding: 30px 20px;
+    }
+
+    /*========================================*/
+    /* Potenza Custom Filters - Shortcode */
+    /*========================================*/
+    .search .search-block {
+        padding: 25px 20px 25px;
+    }
+
+    /*========================================*/
+    /* Play Video - Shortcode */
+    /*========================================*/
+    .slick_sider.video-slider .slick-prev,
+    .slick_sider.video-slider .slick-next {
+        width: 25px;
+        height: 25px;
+    }
+    .slick_sider.video-slider .slick-prev:before,
+    .slick_sider.video-slider .slick-next:before {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .slick_sider.video-slider:hover .slick-slider .slick-prev {
+        left: 15px;
+    }
+    .slick_sider.video-slider:hover .slick-slider .slick-next {
+        right: 15px;
+    }
+
+    .cdhl_video-button_wrapper .video-info a {width: 70px; height: 70px;}
+    
+    /*========================================*/
+    /* Potenza Tab Vertical Multi Tab - Shortcode */
+    /*========================================*/
+    .tab-vertical.tabs-left .tab-content .tab-pane .grid-item {
+        width: 100%;
+        margin-right: 0;
+    }
+    .tab-vertical.tabs-left .tab-content .tab-pane .grid-item:nth-child(3n) {
+        margin-right: 0%;
+    }
+
+    /*-------------------------------*/
+	/* Vehicle Listing Filters */
+	/*-------------------------------*/
+	.cdhl_vehicles-listing-filters_wrapper.horizontal .listing_sort .select2-container {width: 48% !important; margin-left: 1%; margin-right: 1%;}
+	body .cdhl_vehicles-listing-filters_wrapper.horizontal .listing_sort .sort-filters .reset_filters-container {width: 100% !important;}
+
+    /*===============================================*/
+    /* Dealer List - Shortcode */
+    /*===============================================*/
+    .cdfs-dealers-wrapper .cdfs-dealers-list-wrapper .cdfs-dealers-list tbody td {
+        display: block;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-list-wrapper .cdfs-dealers-list tbody td:before {
+        display: block;
+        position: relative;
+        font-size: 14px;
+        padding-bottom: 8px;
+    }
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form {padding: 25px;}
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-tools .cdfs-dealers-search-search input {padding: 9px 30px;}
+    .cdfs-dealers-wrapper .cdfs-dealers-search-form .cdfs-dealers-search-tools .cdfs-dealers-search-reset input {padding: 8px 25px;}
+
+    /*===============================================*/
+	/* Mailchimp - Shortcode */
+	/*===============================================*/
+	.cdhl-mailchimp .mc4wp-form > .mc4wp-form-fields > p > label {white-space: inherit;	flex-wrap: wrap;}
+	.cdhl-mailchimp .mc4wp-form > .mc4wp-form-fields input {width: 100%;}
+	.cdhl-mailchimp .mc4wp-form > .mc4wp-form-fields > p > label > input {margin-top: 10px;}
+
+    /*========================================*/
+    /* Newsletter - Shortcode */
+    /*========================================*/
+    .news-letter.style-2 .newsletter-control-wrapper {flex-wrap: wrap;}
+    .news-letter.style-2 .newsletter-control-wrapper .button-control {width: 100%;}
+    .news-letter.style-2 .newsletter-control-wrapper .button-control .button {width: 100%; padding: 11px 40px;}
+
+    /* Newsletter : Style 3 */
+    .news-letter.style-3 .newsletter-control-wrapper {flex-wrap: wrap;}
+    .news-letter.style-3 .newsletter-control-wrapper .cd-loader {right: 10px;}
+    .news-letter.style-3 .newsletter-control-wrapper .input-control input {padding-right: 0;}
+    .news-letter.style-3 .newsletter-control-wrapper .button-control {position: relative; width: 100%;}
+    .news-letter.style-3 .newsletter-control-wrapper .button-control .button {width: 100%;}
+
+    /*===============================================*/
+    /* Hero Vehicle Banner - Shortcode */
+    /*===============================================*/
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta-data {flex-wrap: wrap;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta-data .hero-vehicle-info-carousel-item-meta-data-left {width: 100%; margin-bottom: 15px;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta-data .hero-vehicle-info-carousel-item-meta-data-right {width: 100%; padding-left: 0;}
+
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta-specs {flex-wrap: wrap;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-nav {bottom: 10px; right: 20px !important; background: #ffffff;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-nav .slick-arrow:before {color: #323232;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta-specs .hero-vehicle-info-carousel-item-meta-spec {width: calc(50% - 15px); flex: none;}
+    .hero-vehicle-info-wrapper .hero-vehicle-info-carousel-item-meta-data .hero-vehicle-info-carousel-item-meta-data-link .hero-vehicle-info-carousel-item-meta-data-link {padding: 10px 15px;}
+
+    /*========================================*/
+    /* Vehicles by Type - Shortcode */
+    /*========================================*/
+    .search-logo.style_2 .search-logo-box strong {font-size: 16px;}
+}
+
+
+@media (max-width: 375px) {
+
+    /* Vehicles by Type - Shortcode */
+    .search-logo.style_1 .cardealer-tabcontent .col-md-3,
+    .search-logo.style_2 .cardealer-tabcontent .col-md-3 {width: 100%; float: none;}
+}
