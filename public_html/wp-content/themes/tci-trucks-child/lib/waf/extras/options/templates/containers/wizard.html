@@ -1,0 +1,39 @@
+<div id="rootwizard" class="widget has-shadow">
+	<form {{#if id}}id="{{id}}" {{/if}} {{#if uuid}}data-uuid="{{uuid}}" {{/if}} {{#if ajax}} action="{{url}}"
+		{{/if}} {{#unless ajax}}action="{{url}}" {{/unless}} data-id="{{name}}" method="{{method}}"
+		class="waf wizard {{class}}" id="{{id}}" enctype="{{enctype}}" target="{{target}}" {{{dataAttr}}}>
+		<div class="step-container w-xl-50 mx-auto">
+			<div class="step-wizard">
+				<div class="progress">
+					<div class="progressbar" style="width: 33.3333%;"></div>
+				</div>
+				<ul class="nav nav-pills flex-nowrap">
+					{{#each fields}}
+					<li>
+						<a href="#{{this.id}}" data-toggle="tab">
+							<span class="step">{{this.index}}</span>
+							<span class="title">{{this.title}}</span>
+						</a>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+		<div class="tab-content">
+			{{> fields}}
+		</div>
+		<ul class="pager wizard text-right d-flex  mt-3">
+			<li class="previous d-inline-block disabled  ml-auto">
+				<a href="javascript:;" class="btn btn-shadow ripple  btn-lg">Previous</a>
+			</li>
+			<li class="next d-inline-block disabled ml-3">
+				<a href="javascript:;" class="btn btn-success ripple  btn-lg">Next</a>
+			</li>
+			{{#unless invalid}} 
+				<li class="submit d-inline-block ml-3">
+					<input type="submit" class="btn btn-success btn-lg" value="Save">
+				</li>
+			{{/unless}}
+		</ul>
+	</form>
+</div>

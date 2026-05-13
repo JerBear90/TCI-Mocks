@@ -1,0 +1,11 @@
+<form {{#if id}}id="{{id}}" {{/if}} action="{{url}}" {method="{{method}}"
+    class="waf {{class}}" id="{{id}}" 
+    enctype="{{enctype}}" 
+    target="{{target}}" 
+    {{{dataAttr}}} 
+    {{#if name}}name="{{name}}"
+	{{/if}}>
+        
+        {{> fields}}
+
+</form>

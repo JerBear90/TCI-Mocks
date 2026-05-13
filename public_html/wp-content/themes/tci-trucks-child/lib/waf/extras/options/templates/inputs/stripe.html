@@ -1,0 +1,34 @@
+<div id="{{id}}" class="{{class}}">
+
+    {{#if showExisting}}
+        <div class="existing">
+            <label>Card on File</label>
+            <div class="value">
+                {{#if card.last4}}
+                    {{card.brand}} ending in {{card.last4}}
+                    {{#if card.name}} belonging to {{card.name}}{{/if}}
+                {{/if}}
+                {{#unless card}}
+                    No valid card on file
+                {{/unless}}
+            </div>
+        </div>
+    {{/if}}
+
+    
+    {{#if label}}
+		<label for="name">
+			{{{label}}} {{#if showColon}}:{{/if}}
+			{{#if showStar}} {{#if required}}*{{/if}} {{/if}}
+		</label>
+    {{/if}}
+    {{#each cardDetails}}
+        <div class="form-subgroup">
+            {{this.label}}
+            <input name="{{this.key}}" type="text" class="form-control" value="{{this.value}}">
+        </div>
+    {{/each}}
+
+    <div class="card"></div>
+</div>
+    

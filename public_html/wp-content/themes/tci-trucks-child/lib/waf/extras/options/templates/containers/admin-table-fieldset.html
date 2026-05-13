@@ -1,0 +1,13 @@
+<fieldset {{#if id}}id="{{id}}" {{/if}} class="clearfix fieldset {{class}} {{name}}" name="{{name}}" {{{dataAttr}}}>
+    <table class="form-table">
+        <div class="bd {{bdClass}}" data-index="0">
+            {{#if legend}}
+                <legend>{{legend}}</legend>
+            {{/if}}
+            {{#if desc}}
+                <span class="desc">{{{desc}}}</span>
+            {{/if}}
+            {{> fields}}
+        </div>
+    </table>
+</fieldset>

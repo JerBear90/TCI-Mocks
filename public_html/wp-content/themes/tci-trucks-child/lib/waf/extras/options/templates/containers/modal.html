@@ -1,0 +1,40 @@
+<div class="modal-form modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form {{#if id}}id="{{id}}"{{/if}} {{#if uuid}}data-uuid="{{uuid}}"{{/if}} action="{{action}}" 
+                data-id="{{name}}"
+                method="{{method}}" 
+                class="{{class}}"
+                id="{{id}}"
+                enctype="{{enctype}}"
+                target="{{target}}"
+                {{data_attr}}
+            >
+                <div class="bd clearfix {{bd_class}}">
+                    {{> fields}}
+                </div>
+                <div class="messages">
+                    {{#if messages}}
+                        {{#each messages}}
+                            <div class="alert alert-{{this.status}}">
+                                {{this.text}}
+                            </div>
+                        {{/each}}
+                    {{/if}}
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary submit">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

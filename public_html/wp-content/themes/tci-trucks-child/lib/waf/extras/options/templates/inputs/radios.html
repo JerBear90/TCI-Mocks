@@ -1,0 +1,26 @@
+<div class="radios fieldgroup {{itemsClass}}">
+	{{#each options}}
+	<span class="radio-button {{../itemClass}} {{this.value}} {{#if this.checked}}checked{{/if}}">
+		<input id="radio-{{../name}}-{{this.value}}-{{../random}}" type="radio" name="{{../nameAttr}}" {{optionClass}} placeholder="{{placeholder}}"
+			class="form-check {{../inputClass}}" value="{{this.value}}" {{#if this.checked}} checked="true" {{/if}} />
+		<label for="radio-{{../name}}-{{this.value}}-{{../random}}">
+			{{{this.label}}}
+			{{#if this.tooltip}}
+				<a title="{{this.tooltip}}" data-toggle="tooltip">
+					<i class="fa fa-question"></i>
+				</a>
+			{{/if}}
+		</label>
+	</span>
+	{{/each}}
+	{{#if other }}
+	<div class="input-group">
+		<input id="radio-{{name}}-other-{{random}}" name="{{nameAttr}}" value="" type="text" placeholder="{{placeholder}}"
+			class="form-control other {{inputClass}}" />
+		<div class="input-group-append">
+			<button class="btn btn-sm btn-danger clear"><i class="fa fa-times"></i></button>
+		</div>
+	</div>
+	{{/if}}
+
+</div>

@@ -1,0 +1,36 @@
+<div id="{{id}}" class="{{class}}">
+
+    {{#if showExisting}}
+        <div class="existing mb-3">
+            <div class="value form-check d-flex align-items-center">
+                {{#each cards}}
+                    {{#if this.last4}}
+                        <input id="card-{{this.id}}" checked ="checked" class="form-check d-inline-block" type="radio" name="stripe_card" value="{{this.id}}">
+                        <label class="d-inline-block" for="card-{{this.id}}">
+                            {{this.brand}} ending in {{this.last4}}
+                        </label>
+                    {{/if}}
+                {{/each}}
+                {{#unless cards}}
+                    No valid cards on file
+                {{/unless}}
+            </div>
+            <div class="value form-check d-flex align-items-center">
+                <input id="card-{{this.id}}" class="form-check d-inline-block" type="radio" name="stripe_card" value="{{this.id}}"
+                    {{#if this.default}} checked="checked" {{/if}}>
+                <label class="d-inline-block" for="card-{{this.id}}">
+                    {{this.messages.addCard}}
+                </label>
+            </div>
+        </div>
+    {{/if}}
+    <input name="stripe_token" type="hidden">
+    <div class="card {{#if showExisting}} d-none{{/if}}"></div>
+    {{#each cardDetails}}
+        <div class="form-subgroup">
+            {{this.label}}
+            <input name="{{this.key}}" type="text" class="form-control" value="{{this.value}}" required="true">
+        </div>
+    {{/each}}
+</div>
+    

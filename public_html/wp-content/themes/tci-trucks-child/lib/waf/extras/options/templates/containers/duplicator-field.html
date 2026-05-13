@@ -1,0 +1,46 @@
+<div class="form-group duplicator {{type}} {{class}}" {{#if id}}id="{{id}}"{{/if}} class="{{class}}" data-id="{{name}}" {{{dataAttr}}}>
+	{{#if label}}
+		<label for="name">
+			{{{label}}} {{#if showColon}}:{{/if}}
+			{{#if showStar}} {{#if required}}*{{/if}} {{/if}}
+		</label>
+	{{/if}}
+	
+	<div class="desc">{{{desc}}}</div>
+	{{> input}}
+	
+	
+	{{#if tooltip}}
+		<a class="btn btn-sm btn-info py-0 px-2 rounded-circle m-2 text-dark float-right" data-toggle="tooltip" data-placement="top" title="{{tooltip}}">
+			?
+		</a>
+	{{/if}}
+	<div class="d-flex justify-content-between mt-2 ft w-100">
+		<!-- <div class="tip">
+			<span class="key">TAB</span> next item
+		</div> -->
+		<div class="append">
+			{{#if append}}
+				{{{append}}}
+			{{/if}}
+		</div>
+		<div class="errors mx-auto">
+			{{#if errorMessage}}
+				<div class="alert alert-danger">{{errorMessage}}</div>
+			{{/if}}
+		</div>
+		<div class="{{classes.buttonContainer}} align-self-end">
+			<button class="add-duplicator-row btn btn-block btn-success {{classes.button}}" tabindex="-1">+</button>
+		</div>
+	</div>
+	{{#if edit}}
+		<div class="buttons">
+			<a class="edit text-primary"><i class="fa fa-pencil"></i></a>
+		</div>
+	{{/if}}
+	{{#if css}}
+		<style>
+			{{css}}
+		</style>
+	{{/if}}
+</div>

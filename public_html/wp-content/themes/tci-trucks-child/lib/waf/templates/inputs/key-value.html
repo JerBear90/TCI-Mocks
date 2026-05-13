@@ -1,0 +1,18 @@
+<div class="input-group key-value {{inputClass}}">
+	<div class="value d-flex align-items-end justify-content-stretch w-100 mb-0 pb-0">
+		<div class="col mb-0 pb-0">{{labels.key}}</div>
+		<div class="col mb-0 pb-0">{{labels.value}}</div>
+	</div>
+	{{#each value}}
+		<div class="input d-flex align-items-end justify-content-stretch w-100 mb-1" data-name="{{../name}}" data-index="{{this.index}}">
+			<input type="text" data-type="key" data-key="{{../keys.key}}" data-index="{{this.index}}" value="{{this.key}}" class="form-control">
+			<input type="text" data-type="value" data-key="{{../keys.value}}" data-index="{{index}}" value="{{this.value}}" class="form-control">
+			<div class="input-group-append">
+				<button class="remove-field-row btn btn-danger" tabindex="-1">-</button>
+			</div>
+		</div>
+	{{/each}}
+	<div class="{{classes.buttonContainer}} mt-2">
+		<button class="add-field-row btn btn-block btn-success {{classes.button}}">+</button>
+	</div>
+</div>

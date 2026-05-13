@@ -1,0 +1,24 @@
+{{#if other }}
+<div class="input-group">
+	<input name="{{name}}" value="" type="text" placeholder="{{placeholder}}"
+		class="form-control other {{inputClass}}" 
+		{{#if inputId}}id="{{inputId}}"{{/if}} />
+	<div class="input-group-append">
+		<button class="btn btn-sm btn-danger clear"><i class="fa fa-times"></i></button>
+	</div>
+</div>
+{{/if}}
+{{#unless other}}
+<select {{#if multiple}}multiple{{/if}} name="{{nameAttr}}" class="form-control {{inputClass}}"
+	{{#if required}}required{{/if}} {{#if autocomplete}}autocomplete="{{autocomplete}}" {{/if}}
+	{{#if inputId}}id="{{inputId}}"{{/if}}>
+	{{#if placeholder}}
+	<option value=''>{{placeholder}}</option>
+	{{/if}}
+	{{#each options}}
+	<option value="{{this.value}}" {{#if this.checked}} selected{{/if}} value={{this.value}}>
+		{{this.label}}
+	</option>
+	{{/each}}
+</select>
+{{/unless}}

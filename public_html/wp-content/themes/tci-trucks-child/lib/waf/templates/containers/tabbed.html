@@ -1,0 +1,16 @@
+<form {{#if id}}id="{{id}}" {{/if}} {{#if uuid}}data-uuid="{{uuid}}" {{/if}} {{#if ajax}} action="{{url}}" {{/if}}
+    {{#unless ajax}}action="{{url}}" {{/unless}} data-id="{{name}}" method="{{method}}" class="waf wizard {{class}}"
+    id="{{id}}" enctype="{{enctype}}" target="{{target}}" {{{dataAttr}}} data-handler="simple" novalidate="true" data-skipValidation="true">
+    <ul class="nav nav-tab">
+        {{#each fields}}
+            <li class="px-4">
+                <a href="#{{this.id}}" data-toggle="tab">
+                    <span class="title">{{this.title}}</span>
+                </a>
+            </li>
+        {{/each}}
+    </ul>
+    <div class="tab-content">
+        {{> fields}}
+    </div>
+</form>

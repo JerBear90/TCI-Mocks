@@ -1,0 +1,18 @@
+<script>
+  var recaptchaOnload = function (e, token) {
+    console.log('token', token);
+    grecaptcha.render('recaptcha-{{id}}', { 'sitekey': '{{site_key}}' });
+    grecaptcha.ready(function () {
+      grecaptcha.execute('{{site_key}}', { action: 'homepage' });
+
+    });
+  }
+  var recaptchaComplete = function (token) {
+    var $ = jQuery.noConflict();
+    var field = $('#recaptcha-{{id}}').getFieldObject();
+
+    field.context.value = token;
+  }
+</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=recaptchaOnload&render=explicit" async defer></script>
+<div class="g-recaptcha" data-callback="recaptchaComplete" id="recaptcha-{{id}}" data-sitekey=" {{site_key}}"></div>

@@ -1,0 +1,58 @@
+{{#if simple}}
+<input type="file" name="{{nameAttr}}{{#if multiple}}[]{{/if}}" value="{{value}}" {{#if multiple}} multiple {{/if}}
+    placeholder="{{placeholder}}" {{#if accept}} accept="{{accept}}" {{/if}} />
+{{/if}}
+
+{{#unless simple}}
+<div class="d-flex">
+    <div class="files col p-0">
+        <input type="file" name="{{nameAttr}}{{#if multiple}}[]{{/if}}" value="{{value}}" {{#if multiple}} multiple
+            {{/if}} placeholder="{{placeholder}}" {{#if accept}} accept="{{accept}}" {{/if}} />
+        <ul class="filelist list-group p-0 m-0">
+            {{#each files}}
+            <li data-id="{{this.id}}"
+                class="list-group-item file-preview d-flex justify-content-between flex-wrap align-items-center">
+                <div class="name ">
+                    {{#if this.complete}}
+                    <i class="fa fa-check text-primary"></i>
+                    {{/if}}
+                    <strong>{{this.name}}</strong>
+                    {{this.filesize}}
+                </div>
+                {{#if ../tags}}
+                <div class="tags d-flex ">
+                    {{#each ../tags}}
+                    <div class="tag">
+                        {{this}}
+                        <input class="tag" type="radio" name="{{this}}" value="{{../../value}}">
+                    </div>
+                    {{/each}}
+                </div>
+                {{/if}}
+                <a class="btn  btn-danger delete p-3 text-white align-self-center btn-sm p-0">
+                    <i class="fa fa-close" data-index="{{this.fieldId}}"></i>
+                </a>
+                {{#if this.loading}}
+                <div class="progress w-100 mt-3">
+                    <div class="progress-bar" style="width:{{this.percent}}%"></div>
+                </div>
+                {{/if}}
+            </li>
+            {{/each}}
+        </ul>
+        {{#if invalidExtension}}
+        <div class=" alert alert-warning">
+            Invalid file type
+        </div>
+        {{/if}}
+    </div>
+    {{#if route}}
+        {{#unless hideSave}}
+            <div class="btn-group d-flex flex-column justify-content-stretch">
+                <button class="btn btn-danger reset-uploader">Reset</button>
+                <button class="btn btn-success save-uploader">Save</button>
+            </div>
+        {{/unless}}
+    {{/if}}
+</div>
+{{/unless}}

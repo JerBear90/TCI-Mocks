@@ -1,0 +1,12 @@
+<div class="form-check form-group {{type}} {{class}}" {{#if id}}id="{{id}}" {{/if}} data-id="{{name}}" style="margin-bottom: 15px;"{{{dataAttr}}}>
+	{{#if toggle}}<div class="slider-container">{{/if}}
+		{{> input}}
+		<div class="desc">{{desc}}</div>
+		{{#if tooltip}}
+		<a class="btn bnt-sm btn-info py-0 px-2 rounded-circle m-2 text-dark" data-toggle="tooltip" data-placement="top"
+			title="{{tooltip}}">
+			?
+		</a>
+		{{/if}}
+		{{#if toggle}}</div>{{/if}}
+</div>

@@ -1,0 +1,40 @@
+<ul class="forms list-group d-flex">
+    {{#each forms}}                            
+        <li class="list-group-item d-flex flex-wrap">
+            <!-- <div class="id">
+                {{this.id}}
+            </div> -->
+            
+            <div class="slug col">
+                {{this.slug}}
+            </div>
+            <div class="name col">
+                {{this.name}}
+            </div>
+            <div class="status col">
+                {{this.status}}
+            </div>
+            <div class="type col">
+                Source: {{this.type}}
+            </div>
+            <button class="preview-form btn btn-primary btn-sm mx-1" data-uuid="{{this.uuid}}">
+                <i class="fa fa-eye"></i>
+            </button>
+            <button class="edit-form btn btn-success btn-sm mx-1" data-uuid="{{this.uuid}}" data-edit="true" data-renderMode="default">
+                <i class="fa fa-pencil"></i>
+            </button>
+            <button class="delete-form btn btn-danger btn-sm mx-1" data-uuid="{{this.uuid}}">
+                <i class="fa fa-trash"></i>
+            </button>
+            <div class="editor w-100">
+
+            </div>
+        </li>
+    {{/each}}
+    <li class="list-group-item d-flex">
+        <button class="add-from btn btn-sm btn-block btn-success mx-1">
+                <i class="fa fa-plus mr-2"></i>
+                Add New
+        </button>
+    </li>
+</ul>

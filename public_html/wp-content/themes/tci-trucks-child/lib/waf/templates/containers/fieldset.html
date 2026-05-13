@@ -1,0 +1,23 @@
+<fieldset {{#if id}}id="{{id}}" {{/if}} class="clearfix fieldset {{class}} {{name}}" name="{{name}}" {{{dataAttr}}}>
+	{{#if legend}}
+		<legend>{{legend}}</legend>
+	{{/if}}
+	<div class="bd {{bdClass}}" data-index="0">
+		
+		{{#if desc}}
+		<span class="desc">{{{desc}}}</span>
+		{{/if}}
+		{{> fields}}
+		{{#if duplicate}}
+		<a class="btn btn-danger text-white remove-row align-self-center" target="fieldset">-</a>
+		{{/if}}
+		<div class="append">
+			{{#if append}}
+			{{{append}}}
+			{{/if}}
+		</div>
+	</div>
+	{{#if duplicate}}
+	<a class="btn btn-success text-white add-row align-self-center" target="fieldset">+</a>
+	{{/if}}
+</fieldset>

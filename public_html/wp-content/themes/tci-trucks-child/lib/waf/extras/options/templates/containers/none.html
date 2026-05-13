@@ -1,0 +1,12 @@
+<div class="bd clearfix {{bdClass}}">
+    {{> fields}}
+</div>
+<div class="messages">
+    {{#if messages}}
+        {{#each messages}}
+            <div class="alert alert-{{this.status}}">
+                {{this.text}}
+            </div>
+        {{/each}}
+    {{/if}}
+</div>

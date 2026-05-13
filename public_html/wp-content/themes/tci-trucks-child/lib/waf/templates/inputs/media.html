@@ -1,0 +1,80 @@
+<input name="{{nameAttr}}[url]" value="{{value.url}}" class="value" type="hid den">
+<input type="hidden" class="id" name="{{nameAttr}}[id]" value="{{value.id}}">
+<a href="#" class="media-button" data-type={{data.type}}>
+    Select File
+</a>
+<div class="preview" {{#unless value}}style="display:none" {{/unless}}>
+    <img src="{{value.url}}" style="width:40px;height:40px;">
+</div>
+<script>
+    if( !window.mediaScriptRendered ) {
+        window.mediaScriptRendered = 1;
+        jQuery(document).ready(function ($) {
+            if( window.media_inputs_loaded ) return;
+            window.media_inputs_loaded = 1;
+            var file_frame;
+            if (wp.media) {
+                var wp_media_post_id = wp.media.model.settings.post.id;
+
+                var post_id = $("#post_ID").val();
+                $(document).on('click', '.media-button', function (e) {
+                    // Uploading files
+                    var $input = $(this).parent().find('input').first();
+                    var $preview = $(this).parent().find('.preview');
+                    var $img = $(this).parent().find('img');
+                    var $button = $(this);
+                    window.$field = $button.parent();
+                    var type = $button.data('type') ? $button.data('type') : ['video', 'image']
+                    // d('type:', type);
+
+                    e.preventDefault();
+                    if (file_frame) {
+                        if (post_id) file_frame.uploader.uploader.param('post_id', post_id);
+                        // Open frame
+                        file_frame.open();
+                        return;
+                    } else {
+                        // Set the wp.media post id so the uploader grabs the ID we want when initialised
+                        if (post_id) wp.media.model.settings.post.id = post_id;
+                    }
+                    // Create the media frame.
+                    file_frame = wp.media.frames.file_frame = wp.media({
+                        title: 'Select a image to upload',
+                        button: {
+                            text: 'Finished',
+                        },
+                        library: {
+                            type: type
+                        },
+                        multiple: false	// Set to true to allow multiple files to be selected
+                    });
+
+                    // When an image is selected, run a callback.
+                    file_frame.on('select', function () {
+                        // We set multiple to false so only get one image from the uploader
+                        attachment = file_frame.state().get('selection').first().toJSON();
+                        // Do something with attachment.id and/or attachment.url here
+                        // d(attachment);
+                        var $input = window.$field.find('input.value');
+                        var $id = window.$field.find('input.id');
+                        var $preview = window.$field.find('.preview');
+                        var $img = window.$field.find('img');
+                        d("ATTACHMENT:",attachment);
+                        $img.attr('src', attachment.url).css('height', 'auto');
+                        d("input:",$input[0],)
+                        $input.val(attachment.url);
+                        $id.val(attachment.id);
+                        // Restore the main post ID
+                        wp.media.model.settings.post.id = wp_media_post_id;
+                    });
+                    // Finally, open the modal
+                    file_frame.open();
+                });
+                // Restore the main ID when the add media button is pressed
+                jQuery('a.add_media').on('click', function () {
+                    wp.media.model.settings.post.id = wp_media_post_id;
+                });
+            }
+        });
+    }
+</script>

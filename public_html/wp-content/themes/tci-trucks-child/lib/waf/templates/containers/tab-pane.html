@@ -1,0 +1,15 @@
+<div {{#if id}}id="{{id}}"{{/if}} class="clearfix tab-pane {{class}} {{name}}" name="{{name}}" {{{dataAttr}}}>
+	<div class="{{bdClass}} bd">
+		{{#if desc}}
+			<span class="desc">{{{desc}}}</span>
+		{{/if}}
+
+		{{> fields}}
+
+		<div class="append">
+			{{#if append}}
+				{{{append}}}
+			{{/if}}
+		</div>
+	</div>
+</div>

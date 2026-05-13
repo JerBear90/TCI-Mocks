@@ -1,0 +1,68 @@
+<div class="form-group input-group field-editor border row bg-primary" {{#if id}}id="{{id}}"{{/if}} data-id="{{name}}" data-uuid="{{this.uuid}}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 p-3 border bg-info editor-field-preview">
+                {{> field}}
+            </div>
+            <div class="col-md-3 text-white bg-secondary pb-3">
+                <fieldset data-id="css">
+                    {{> css}}
+                </fieldset>
+                <fieldset data-id="messasges">
+                    {{> messages}}
+                </fieldset>
+            </div>
+            <div class="col-md-9 py-2 text-white">
+                <fieldset data-id="std">
+                    {{> std}}
+                </fieldset> 
+                <fieldset data-id="specific">
+                    {{> specific}}
+                </fieldset>
+                <div class="accordion mt-3" id="accordion-{{name}}">
+                    <!-- <div class="card text-dark">
+                        <div class="card-header" id="options-{{heading}}">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#options-{{name}}" aria-expanded="true" aria-controls="options-{{name}}">
+                                Messages
+                            </button>
+                        </div>
+                    
+                        <div id="options-{{name}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion-{{name}}">
+                            <div class="card-body">
+                                {{> messages}}
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="card text-dark">
+                        <div class="card-header" id="options-{{heading}}">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#options-{{name}}" aria-expanded="true" aria-controls="options-{{name}}">
+                                Options
+                            </button>
+                        </div>
+                    
+                        <div id="options-{{name}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-{{name}}">
+                            <fieldset data-id="options" class="card-body">
+                                {{> options}}
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="card text-dark">
+                        <div class="card-header" id="options-{{heading}}">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#options-{{name}}" aria-expanded="true" aria-controls="options-{{name}}">
+                                Other
+                            </button>
+                        </div>
+                        <div id="options-{{name}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-{{name}}">
+                            <fieldset data-id="other" class="card-body">
+                                {{> other}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{> buttons}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="inner">
+    <div class="bd">
+        {{#if value}}
+            <div class="d-block">
+                <div class="img-upload col p-0 border">
+                    {{#if value}}
+                        <img src="{{value}}" class="img-fluid">
+                    {{/if}}
+                </div>
+                <a class="ml-2 remove">
+                    <i class="la la-times" data-index="{{this.fieldId}}">&nbsp;</i>
+                </a>
+            </div>
+        {{/if}}
+        {{#unless value}}
+            <div class="img-upload border">
+                <i class="fa fa-plus add-icon" data-index="{{this.fieldId}}"></i>
+                <span class="add">{{add}}</span>
+            </div>
+        {{/unless}}
+        {{#if invalidExtension}}
+            <div class=" alert alert-warning">
+                Invalid file type
+            </div>
+        {{/if}}
+    </div>
+    <input type="file" name="{{name}}" value="{{value}}" placeholder="{{placeholder}}"
+        {{#unless accept}}accept="image/*"{{/unless}}
+        {{#if accept}} accept="{{accept}}" {{/if}} />
+</div>

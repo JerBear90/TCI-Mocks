@@ -1,0 +1,66 @@
+<div class="form-group duplicator {{type}} {{class}}" {{#if id}}id="{{id}}" {{/if}}data-id="{{name}}" {{{dataAttr}}}>
+	{{#if labl}}
+	<label for="name">
+		{{{label}}} {{#if showColon}}:{{/if}}
+		{{#if showStar}} {{#if required}}*{{/if}} {{/if}}
+	</label>
+	{{/if}}
+	<div class="desc">{{{desc}}}</div>
+
+	<div class="fieldsets {{classes.bd}} mb-0">
+		{{#each fieldsets}}
+		<div class="fieldset-container {{../classes.container}} d-flex w-100 mb-4">
+			<div class="fieldset-wrap {{../classes.fieldsetWrapper}}">
+				{{{this.html}}}
+			</div>
+			<div class="{{classes.buttonContainer}} duplicator-buttons  align-self-center">
+				<button class="remove-duplicator-row btn btn-block btn-danger btn-default {{classes.removeButton}}"
+					data-index={{this.index}}>-</button>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+	<div class="{{classes.buttonContainer}} duplicator-buttons add-duplicator-row-container pull-right">
+		<button class="add-duplicator-row btn btn-success btn-default {{classes.button}}">+</button>
+	</div>
+
+	{{#if tooltip}}
+	<a class="btn btn-sm btn-info py-0 px-2 rounded-circle m-2 text-dark float-right" data-toggle="tooltip"
+		data-placement="top" title="{{tooltip}}">
+		?
+	</a>
+	{{/if}}
+
+	<div class="d-flex justify-content-between mt-2 ft w-100">
+		<!-- <div class="tip">
+			<span class="key">TAB</span> next item
+		</div> -->
+		<div class="append">
+			{{#if append}}
+			{{{append}}}
+			{{/if}}
+		</div>
+		<div class="errors mx-auto">
+			{{#if errorMessage}}
+			<div class="alert alert-danger">{{errorMessage}}</div>
+			{{/if}}
+		</div>
+
+	</div>
+
+	{{#if edit}}
+	<div class="buttons">
+		<a class="edit text-primary"><i class="fa fa-pencil"></i></a>
+	</div>
+	{{/if}}
+
+	{{#if css}}
+	<style>
+		{
+				{
+				css
+			}
+		}
+	</style>
+	{{/if}}
+</div>

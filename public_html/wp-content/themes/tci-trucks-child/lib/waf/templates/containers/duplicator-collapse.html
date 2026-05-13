@@ -1,0 +1,57 @@
+<div class="form-group duplicator {{type}} {{class}}" {{#if id}}id="{{id}}" {{/if}}data-id="{{name}}" {{{dataAttr}}}>
+	<div class="fieldsets {{classes.bd}} mb-0" >
+		{{#each fieldsets}}
+		<div class="fieldset-container {{../classes.container}} mb-0">
+			<div class="border w-25 d-flex justify-content-between align-items-center px-3">
+				{{this.title}} {{this.index}}
+				<button class="btn btn-primary btn-sm my-2" type="button" data-toggle="collapse" data-target="{{this.id}}-content">
+					Details
+					{{#if label}}
+						<label for="name">
+							{{{label}}} {{#if showColon}}:{{/if}}
+							{{#if showStar}} {{#if required}}<span class="text-danger required ml-2">*</span>{{/if}} {{/if}}
+						</label>
+					{{/if}}
+				</button>
+			</div>
+			<div class="collapse" id="{{this.id}}-content">
+				<div class="fieldset-wrap {{../classes.fieldsetWrapper}}">
+					{{{this.html}}}
+				</div>
+				<div class="{{classes.buttonContainer}} ml-2 duplicator-buttons  align-self-center">
+					<button class="remove-duplicator-row btn btn-sm btn-block btn-danger btn-default {{classes.removeButton}}"
+						data-index={{this.index}}>-</button>
+				</div>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+	<div class="{{classes.buttonContainer}} duplicator-buttons add-duplicator-row-container pull-right">
+		<button class="add-duplicator-row btn btn-success btn-default btn-sm {{classes.button}}">+</button>
+	</div>
+
+	{{#if tooltip}}
+	<a class="btn btn-sm btn-info py-0 px-2 rounded-circle m-2 text-dark float-right" data-toggle="tooltip"
+		data-placement="top" title="{{tooltip}}">
+		?
+	</a>
+	{{/if}}
+
+	<div class="d-flex justify-content-between mt-2 ft w-100">
+		<!-- <div class="tip">
+			<span class="key">TAB</span> next item
+		</div> -->
+		<div class="append">
+			{{#if append}}
+			{{{append}}}
+			{{/if}}
+		</div>
+		<div class="errors mx-auto">
+			{{#if errorMessage}}
+			<div class="alert alert-danger">{{errorMessage}}</div>
+			{{/if}}
+		</div>
+
+	</div>
+
+</div>

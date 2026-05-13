@@ -1,0 +1,22 @@
+<div class="d-flex">
+    <button class="yes btn btn-success" data-value="true">
+        {{confirm}}
+        {{#unless confirm}}
+        Yes
+        {{/unless}}
+    </button>
+    <!-- <span class="key-nav">Y</span> -->
+    {{#unless other}}
+    <button class="{{#if allowOther}}toggle-other{{/if}} no btn btn-danger"
+        data-value="{{#if allowOther}}other{{/if}}{{#unless allowOther}}false{{/unless}}">
+        {{reject}}
+        {{#unless reject}}
+        No
+        {{/unless}}
+    </button>
+    {{/unless}}
+    <!-- <span class="key-nav">N</span> -->
+    {{#if other}}
+    <input type="text" value="" class="ml-4 other" />
+    {{/if}}
+</div>

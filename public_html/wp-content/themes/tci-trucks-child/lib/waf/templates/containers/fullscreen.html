@@ -1,0 +1,59 @@
+<div class="waf-fullscreen-container">
+    <form {{#if id}}id="{{id}}"{{/if}} {{#if uuid}}data-uuid="{{uuid}}"{{/if}} 
+        {{#if ajax}} action="{{action}}"{{/if}}
+        {{#unless ajax}}action="{{url}}"{{/unless}}
+        data-id="{{name}}"
+        method="{{method}}" 
+        class="waf {{class}}"
+        id="{{id}}"
+        enctype="{{enctype}}"
+        target="{{target}}"
+        {{data_attr}}
+    >
+        <div class="form-hd">
+
+        </div>
+        <div class="form-bd">
+            {{#if edit}}
+                <button class="btn btn-block btn-success save-form-editor mb-3">
+                    Save
+                </button>
+            {{/if}}
+            <div class="bd clearfix {{bdClass}}">
+                {{> fields}}
+            </div>
+            <div class="row w-100">
+                <div class="messages col-md-6">
+                    {{#if messages}}
+                        {{#each messages}}
+                            <div class="alert alert-{{this.status}}">
+                                {{this.text}}
+                            </div>
+                        {{/each}}
+                    {{/if}}
+                </div>
+            </div>
+            {{#if edit}}
+                <button class="btn btn-block btn-success save-form-editor mt-3">
+                    Save
+                </button>
+            {{/if}}
+        </div>
+        <div class="form-ft d-flex justify-content-between position-fixed fixed-bottom bg-primary align-items-center py-1 px-3">
+            <div class="progress-container text-white d-flex flex-column text-white">
+                <span class="progress-percent"><span class="text">{{percent}}</span>% completed</span>
+                <div class="form-progress progress">
+                    <div class="progress-bar bg-success progress-bar-striped" style="width:{{percent}}%;"></div>
+                </div> 
+            </div>
+            <div class="pages">
+                <button class="btn btn-secondary previous" data-action="previousField">
+                    <i class="fa fa-chevron-up"></i>
+                </button>
+                <button class="btn btn-secondary next" data-action="nextField">
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

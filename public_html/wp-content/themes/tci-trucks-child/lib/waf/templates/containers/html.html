@@ -1,0 +1,20 @@
+{{#if outerhtml}}
+{{> outerhtml}}
+{{/if}}
+{{#unless outerhtml}}
+<div class="form-group {{type}} {{class}}" {{#if id}}id="{{id}}" {{/if}} {{dataAttr}} data-id="{{name}}">
+    {{#if label}}
+    <label>{{label}}</label>
+    {{/if}}
+
+    {{> input}}
+
+    {{desc}}
+    {{#if tooltip}}
+    <a class="btn bnt-sm btn-info py-0 px-2 rounded-circle m-2 text-dark float-right" data-toggle="tooltip"
+        data-placement="top" title="{{tooltip}}">
+        ?
+    </a>
+    {{/if}}
+</div>
+{{/unless}}

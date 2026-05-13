@@ -1,0 +1,24 @@
+<form {{#if id}}id="{{id}}" {{/if}} {{#if uuid}}data-uuid="{{uuid}}" {{/if}} novalidate=true {{#if ajax}}
+	action="{{url}}" {{/if}} 
+	data-invalid="{{args.messages.invalid}}"
+	{{#unless ajax}}action="{{url}}" data-ajax="false" {{/unless}}
+	{{#if ajax}}data-ajax="true" {{/if}}
+	data-id="{{name}}" method="{{method}}"
+	class="waf {{class}}" id="{{id}}" enctype="{{enctype}}" target="{{target}}" {{{data}}} {{#if name}}name="{{name}}"
+	{{/if}}>
+
+	{{#if edit}}
+	<button class="btn btn-block btn-success save-form-editor mb-3">
+		Save
+	</button>
+	{{/if}}
+	<div class="bd clearfix {{bdClass}}">
+		{{> fields}}
+	</div>
+	{{#if edit}}
+	<button class="btn btn-block btn-success save-form-editor mt-3">
+		Save
+	</button>
+	{{/if}}
+	
+</form>

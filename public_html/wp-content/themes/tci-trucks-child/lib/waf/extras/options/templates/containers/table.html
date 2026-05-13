@@ -1,0 +1,84 @@
+<?php 
+extract($datum);
+$values = maybe_unserialize( $value );
+if( !$remove ) $remove = '-';
+$headers['add'] = '&nbsp;';
+if( !$add ) $add = '+';
+if( is_array($rows) ) $existing = $rows;
+$rows = array(
+	'headers' => $headers,
+	'class' => $class.' table-form',
+	'id' => $id,
+	'data' => array_merge( (array)$data, array(
+		'name' => $name,
+	))
+);
+if( $existing ) $rows = array_merge( $rows, $existing );
+$row_form = get_table_rowform( $form, $headers );
+
+$addrow = get_table_addrow( $form, $headers  );
+$form_obj = $this ? $this : new form();
+$addrow['position'] == 'bottom';
+
+$i = -1;
+if( is_array($values) ) foreach( $values as $value ) {
+	if( empty($value) ) continue;
+	$i++;
+	foreach( $row_form as $h=>$rrrow ) {
+		$input = $row_form[$h];
+		@$input['value'] = $value[$h];
+		$key = $input['key'] ? $input['key'] : $h;
+		if( $h != 'add' ) {
+			$input['name'] = $datum['name'].'['.$i.']['.$key.']';
+		}
+		
+		
+		if(  $h == 'add' ) { 
+			$row[$h] = $addrow[$h];
+		} elseif( is_array($input) ) {
+			if( is_array($input['data'] ) ) {
+				$row[$h] = array(
+					'data' => $input['data'],
+					'value' => $form_obj->get_input( $input )
+				);
+			} else {
+				$row[$h] = $form_obj->get_input( $input );
+			}
+		}
+	}
+	$row['data']['index'] = $i;
+	$rows[] = $row;
+}
+$i++;
+foreach( $row_form as $h=>$rrrow ) {
+	$input = $row_form[$h];
+	$key = $input['key'] ? $input['key'] : $h;
+	if( $h != 'add' ) {
+		$input['name'] = $datum['name'].'['.$i.']['.$key.']';
+	}
+	
+	if(  $h == 'add' ) { 
+		$row[$h] = $addrow[$h];
+	} elseif( is_array($input) ) {
+		if( is_array($input['data'] ) ) {
+			$row[$h] = array(
+				'data' => $input['data'],
+				'value' => $form_obj->get_input( $input )
+			);
+		} else {
+			$row[$h] = $form_obj->get_input( $input );
+		}
+	}
+	$row['data']['index'] = $i;
+	$addrow = $row;
+}
+$rows[] = $addrow;
+$rows['footers'] = array( 'add' => array( 'type' => 'text', 'value' => '<a class="icon-plus add-row" href="#">'.$add.'</a>' ) );
+if( $label ) {
+	echo "<label>$label</label>";
+	if( $this->colon ) echo ':';
+	if( $required ) echo '*';
+	echo "</label>";
+}
+the_table($rows);
+?>

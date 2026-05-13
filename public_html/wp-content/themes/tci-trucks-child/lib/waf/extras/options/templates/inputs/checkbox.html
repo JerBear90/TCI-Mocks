@@ -1,0 +1,10 @@
+
+<input id="check-{{nameAttr}}-{{random}}" 
+	{{#if required}}required{{/if}}
+	class="form-check-input ml-0 {{inputClass}}"
+	type="checkbox"
+	{{#if value}}checked{{/if}}
+	name="{{nameAttr}}"
+	placeholder="{{placeholder}}" 
+	>
+<label for="check-{{nameAttr}}-{{random}}" class="form-check-label {{labelClass}}" style="display:inline-block;">{{{label}}}</label>

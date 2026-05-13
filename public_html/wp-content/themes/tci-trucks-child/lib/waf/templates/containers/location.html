@@ -1,0 +1,44 @@
+<div class="form-group {{name}} {{type}} {{class}} {{#if invalid}}invalid{{/if}}" {{#if id}}id="{{id}}" {{/if}}
+    {{{dataAttr}}}>
+    {{#if label}}
+        <label for="name" class="form-control-label">
+            {{{label}}} {{#if showColon}}:{{/if}}
+            {{#if showStar}}
+                {{#if required}}<span class="text-danger required ml-2">*</span>{{/if}}
+            {{/if}}
+        </label>
+    {{/if}}
+    {{#if desc}}
+        <span class="desc">
+            {{{desc}}}
+        </span>
+    {{/if}}
+    {{> input}}
+    
+    {{#if tooltip}}
+        <a class="btn bnt-sm btn-info py-0 px-2 rounded-circle m-2 text-dark float-right" data-toggle="tooltip"
+            data-placement="top" title="{{tooltip}}">
+            <i class="fa fa-info-cirle"></i>
+        </a>
+    {{/if}}
+    <div class="errors">
+        {{#if errors}}
+            <div class="alert alert-danger">{{errors}}</div>
+        {{/if}}
+    </div>
+    {{#if append}}
+        <div class="append">
+            {{{append}}}
+        </div>
+    {{/if}}
+    {{#if edit}}
+        <div class="buttons">
+            <a class="edit text-primary"><i class="fa fa-pencil"></i></a>
+        </div>
+    {{/if}}
+    {{#if css}}
+        <style>
+        {{{css}}}
+        </style>
+    {{/if}}
+</div>

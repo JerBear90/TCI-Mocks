@@ -1,0 +1,9 @@
+<div class="checkboxes {{name}} {{itemsClass}}">
+	{{#each options}}
+	<div class="checkbox d-flex align-items-start {{../itemClass}} {{this.value}} {{#if this.checked}}checked{{/if}}">
+		<input type="checkbox" id="{{../name}}-{{this.value}}-{{../random}}" name="{{../nameAttr}}[]" value="{{this.value}}"
+			required="{{../required}}" {{#if this.checked}} checked {{/if}} class="form-check mr-2 {{../inputClass}}" />
+		<label for="{{../name}}-{{this.value}}-{{../random}}">{{this.label}}
+	</div>
+	{{/each}}
+</div>

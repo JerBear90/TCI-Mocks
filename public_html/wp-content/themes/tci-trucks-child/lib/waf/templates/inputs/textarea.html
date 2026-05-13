@@ -1,0 +1,9 @@
+<textarea 
+	{{#if rows}}rows="{{rows}}"{{/if}}
+	name="{{nameAttr}}"
+	{{#if required}}required{{/if}}
+	placeholder="{{placeholder}}"
+	{{#if cols}}cols="{{cols}}"{{/if}}
+	{{#if rows}}rows="{{rows}}"{{/if}}
+	class="form-control {{inputClass}} {{#if invalid}}invalid{{/if}}"
+>{{value}}</textarea>

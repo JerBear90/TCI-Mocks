@@ -1,0 +1,20 @@
+<label for="{{id}}">
+    {{#unless left}}
+        <span class="label">{{label}}</span>
+    {{/unless}}
+	<span class="slider-container">
+		<input
+            {{{ attributes }}}
+            type="checkbox"
+            name="{{name}}"
+            {{#if value}}checked{{/if}}
+        />
+		<span class="slider"></span>
+	</span>
+    {{#if left}}
+        <span class="label">{{label}}</span>
+    {{/if}}
+    <div class="desc">
+        {{#if desc}}{{{desc}}}{{/if}}
+    </div>
+</label>

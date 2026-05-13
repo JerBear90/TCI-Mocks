@@ -1,0 +1,18 @@
+<select {{#if multiple}}multiple{{/if}}
+name="{{name}}"
+class="form-control {{inputClass}}"
+{{#if required}}required{{/if}}
+{{#if autocomplete}}autocomplete="{{autocomplete}}"{{/if}}>
+	{{#if placeholder}}
+		<option value=''>{{placeholder}}</option>
+	{{/if}}
+    {{#each options}}
+        <optgroup label="{{this.label}}">
+            {{#each this.options}}
+                <option value="{{this.value}}" {{#if this.checked}} selected{{/if}} value={{this.value}}>
+                    {{this.label}}
+                </option>
+            {{/each}}
+        </optgroup>
+	{{/each}}
+</select>
